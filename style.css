@@ -1,6 +1,7 @@
 /*top navigation bar*/
 .navigation {
     display: flex;
+    flex-flow: row wrap;
     gap: 1rem;
     justify-content: flex-end;
     flex-shrink: 1;
@@ -15,6 +16,36 @@ a {
     text-decoration: none;
 }
 
+.book-display {
+    display: flex; 
+    flex-grow: 1;
+
+    border: 3px;
+    border-style: solid;
+    border-color: green;
+    padding: 24px;
+}
+
+.display-simple {
+    display: grid;
+    grid-area: auto;
+    border-style: solid;
+    border-color: pink;
+    padding: 24px;
+}
+
+.display-complex {
+    display: grid;
+    grid-area: auto;
+    border-style: solid;
+    border-color: pink;
+    padding: 24px;
+}
+
+.display-stack {
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
