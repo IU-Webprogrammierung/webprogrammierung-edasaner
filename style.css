@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 248, 226);
 }
 
 /*top navigation bar*/
@@ -24,26 +25,40 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    border: 3px;
-    border-style: solid;
-    border-color: green;
-    padding: 24px;
+    padding: 60px;
+
 }
 
 .grid-span-2 {
     grid-row: span 2;
+    border-style: solid;
+    border-width: 2px 0px 02px 2px;
 }
+
 
 .content {
     padding: 1.5rem;
-    background-color: aqua;
+    background-color: rgb(255, 248, 226);
+    
+}
+
+.display-simple {
     border-style: solid;
-    align-content: center;
+    border-width: 2px;
 }
 
 .display-complex {
-    img
+    border-style: solid;
+    border-width: 0px 2px 2px 2px;
 }
+
+/* 
+.content > img {
+    display: inline-flex;
+    object-fit: cover;
+    
+}
+*/
 
 /*
 .display-simple {
