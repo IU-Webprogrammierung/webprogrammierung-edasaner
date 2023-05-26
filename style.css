@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /*top navigation bar*/
 .navigation {
     display: flex;
@@ -17,8 +21,8 @@ a {
 }
 
 .book-display {
-    display: flex; 
-    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     border: 3px;
     border-style: solid;
@@ -26,17 +30,35 @@ a {
     padding: 24px;
 }
 
+.grid-span-2 {
+    grid-row: span 2;
+}
+
+.content {
+    padding: 1.5rem;
+    background-color: aqua;
+    border-style: solid;
+    align-content: center;
+}
+
+.display-complex {
+    img
+}
+
+/*
 .display-simple {
-    display: grid;
-    grid-area: auto;
+    display: flex;
+    flex-flow: wrap;
     border-style: solid;
     border-color: pink;
     padding: 24px;
 }
 
 .display-complex {
-    display: grid;
-    grid-area: auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 20px;
     border-style: solid;
     border-color: pink;
     padding: 24px;
@@ -44,10 +66,7 @@ a {
 
 .display-stack {
     display: flex;
+    flex-flow: wrap;
     flex-direction: column;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
+*/
