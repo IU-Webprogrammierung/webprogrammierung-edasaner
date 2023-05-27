@@ -47,6 +47,12 @@ a {
     align-self: center;
 }
 
+.item-media {
+    display: flex;
+    justify-content: space-between;
+    order: -1;
+    gap: 32px;
+}
 
 .bookshelf-item > h2 {
     margin: 1rem 1rem 0rem;
@@ -56,30 +62,11 @@ a {
     margin: 1rem 1rem 0rem;
 }
 
-/*.tags {
-   padding: 0rem;
-   background-color: red;
-   border-radius: 100px;
-   list-style: none;
-
-}*/
-
-/*.tags {
-  font-size: 12px;
-  width: ;
-  border: none;
-  padding: 0.5em 1em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  border-radius: 100px;
-    
-}*/
 .tags {
     border-style: none;
     display: flex;
     flex-direction: row;
+    align-self: flex-start;
     align-items: flex-start;
     padding: 8px 12px;
     gap: 10px;
