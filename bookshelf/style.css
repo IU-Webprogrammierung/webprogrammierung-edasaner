@@ -1,5 +1,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    margin: 32px;
+    font-family: 'Merriweather';
 }
 
 h2 {
@@ -29,7 +35,7 @@ h3 {
     justify-content: flex-end;
     flex-shrink: 1;
 
-    margin: 32px;
+    margin: 32px 32px 0px 32px;
     padding: 0;
     list-style: none;
 }
@@ -40,9 +46,13 @@ a {
 }
 
 .bookshelf {
+    margin: 0px;
+    padding: 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    border: 1px solid black;
+    border: solid;
+    border-color: black;
+    border-width: 1px 0px 0px 0px;
     grid-gap: 1px;
     background-color: black;
 }

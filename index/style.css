@@ -1,6 +1,5 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 248, 226);
 }
 
 /*top navigation bar*/
@@ -38,7 +37,6 @@ a {
 
 .content {
     padding: 1.5rem;
-    background-color: rgb(255, 248, 226);
     
 }
 
