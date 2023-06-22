@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/*top navigation bar*/
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+    flex-shrink: 1;
+
+    margin: 32px 32px 0px 32px;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Merriweather';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    margin: 0px;
+}
+
+h3 {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+
+.tags {
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    align-items: flex-start;
+    padding: 0px 12px;
+    gap: 10px;
+    border-radius: 100px;
+}
+
+.genre {
+    padding: 0px;
+}
+
+.book-detail__title-author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: px;
+}
+
+.book-detail__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.book-title__description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.book-detail {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.book-detail > img {
+    order: -1
+    
+}

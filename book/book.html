@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book-style.css">
     <title>Document</title>
 </head>
+
 <body>
     <!--navigation bar-->
     <nav>
@@ -25,23 +28,53 @@
     </nav>
 
     <!--title-->
-    <h2>Book Title</h2>
-    <h3>Author Name</h3>
+    <article class="book-detail">
+            <div class="book-detail__description-review">
+                <div class="book-detail__top">
+                    <div class="book-detail__title-author">
+                        <h2>Book Title</h2>
+                        <h3>Author Name</h3>
+                    </div>
+                    <div class="tags genre">
+                        <button class="tags fiction" type="button">
+                            <p>Tag name</p>
+                        </button>
+                        <button class="tags fiction" type="button">
+                            <p>Tag name</p>
+                        </button>
+                    </div>
+                </div>
+                <p>
+                    The story of Elena and Lila begins in the 1950s in a poor neighbourhood on the outskirts of Naples.
+                    Growing up
+                    on these tough streets the two girls learn to rely on each other ahead of anyone else, as their
+                    friendship,
+                    becomes a not always perfect shelter from hardship. Through the lives of Elena and Lila, we see a
+                    country
+                    undergoing momentous change.
+                </p>
+                <h3>Review:</h3>
+                <p>
+                    Lörem ipsum anade ådat detelig, tinera. Diheten berar: poss. Seskade larosamma hemibelt soliga. Irade diatyngar. Geolig jopepegt till ninyvis. Trarokaning näbåv inte peliga mikrons. Du kan vara 
+Decis opp bede, höck. Dolall roning. Sol mism prebåpäse sötesm. Nångar ijolärade ogt. Telang kasade kvasigt laryvörar besade. Antiteng pokunde. 
+Päsäna asade hemikäl. Ultravar plade åren geogisk. Ser nis. Höheten råninade: dong eurorän. Antiläl per beska tills spev. Pseudojotebel ladovis oaktat preräna pose. Du kan vara 
 
-    <!--tags-->
+                </p>
+            </div>
+            <img src="/images/elena_ferrante.jpg" height="250px" />
+    </article>
+
+    <!--tags
     <button class="tags fiction" type="button">
         <p>Tag name</p>
     </button>
     <button class="tags fiction" type="button">
         <p>Tag name</p>
-    </button>
+    </button>-->
 
     <!--book image-->
     <img src="/images/elena_ferrante.jpg" height="250px" />
 
-    <p>
-        The story of Elena and Lila begins in the 1950s in a poor neighbourhood on the outskirts of Naples. Growing up on these tough streets the two girls learn to rely on each other ahead of anyone else, as their friendship, becomes a not always perfect shelter from hardship. Through the lives of Elena and Lila, we see a country undergoing momentous change.
-    </p>
 
     <!--further books-->
     <img src="/images/samantha_shannon.jpg" height="240px" />
@@ -56,10 +89,11 @@
         <p>Tag name</p>
     </button>
 
-     <!--footer-->
-     <footer>
+    <!--footer-->
+    <footer>
         Eda Saner 2023
     </footer>
 
 </body>
+
 </html>
