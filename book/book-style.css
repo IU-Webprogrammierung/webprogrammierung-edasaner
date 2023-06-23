@@ -80,9 +80,39 @@ h3 {
     display: inline-flex;
     align-items: flex-start;
     gap: 48px;
+    padding: 24px;
 }
 
 .book-detail > img {
     order: -1
-    
+
+}
+
+.recommendations {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    border: solid;
+    border-color: black;
+    border-width: 1px 0px 0px 0px;
+    grid-gap: 1px;
+    background-color: black;
+}
+
+.recommendations__item {
+    display: flex;
+    flex-flow: row;
+    padding: 2rem;
+    background-color: white;
+}
+
+.recommendations__item > img {
+   align-self: start;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
