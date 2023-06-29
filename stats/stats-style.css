@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 /*top navigation bar*/
@@ -25,7 +26,9 @@ a {
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); */
     border: solid;
     border-color: black;
     border-width: 1px 0px 0px 0px;
@@ -38,6 +41,8 @@ a {
     display: flex;
     flex-direction: column;
     background-color: white;
+    justify-content: space-between;
+    padding: 24px;
 }
 
 .tag-stack {
@@ -62,4 +67,14 @@ a {
 .img-stack {
     display: flex;
     justify-content: space-between;
+}
+
+.favorites {
+    grid-column: 2 / 4;
+}
+
+.placeholder {
+    background-color: white;
+    grid-column: 1 / 2;
+    grid-row: 2;
 }
