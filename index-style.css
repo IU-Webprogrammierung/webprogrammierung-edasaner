@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 
 /*top navigation bar*/
@@ -23,32 +24,41 @@ a {
 .book-display {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    padding: 60px;
+    padding: 0px;
+    background-color: purple;
+    border: solid;
+    border-color: black;
+    border-width: 1px 0px 1px 0px;
+    grid-gap: 1px;
+    background-color: black;
 
 }
 
 .grid-span-2 {
     grid-row: span 2;
-    border-style: solid;
-    border-width: 2px 0px 02px 2px;
+    background-color: white;
 }
 
 
 .content {
     padding: 1.5rem;
+    background-color: white;
     
 }
 
-.display-simple {
-    border-style: solid;
-    border-width: 2px;
+.img-stack {
+    display: flex;
+    justify-content: space-around;
 }
 
-.display-complex {
-    border-style: solid;
-    border-width: 0px 2px 2px 2px;
+/* .display-simple {
+    background-color: white;
 }
+*/
+
+/* .display-complex {
+    display: inline-flex;
+}  */
 
 /* 
 .content > img {
