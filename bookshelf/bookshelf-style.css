@@ -101,11 +101,11 @@ a {
 }
 
 .bookshelf__item > h2 {
-    margin: 1rem 1rem 0rem;
+    margin: 1rem 1rem 0rem 0rem;
 }
 
 .bookshelf__item > h3 {
-    margin: 1rem 1rem 0rem;
+    margin: 1rem 1rem 0rem 0rem;
 }
 
 .tags {
