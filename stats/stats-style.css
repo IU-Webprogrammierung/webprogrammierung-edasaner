@@ -1,3 +1,17 @@
+:root {
+    --main-bg-color: #FFFFFF;
+    --grid-bg-color: #000000;
+    --main-txt-color: #000000;
+
+    --fiction-tag-color: #ECB8FF;
+    --nonfiction-tag-color: #BBDAFF;
+    --tbr-tag-color: #FEC963; 
+    --theory-tag-color: #FFAAAA;
+    --history-tag-color: #BCD49E;
+    --tech-tag-color: #EDEDED;    
+
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -18,7 +32,7 @@ body {
 
 
 a {
-    color: black;
+    color: var(--main-txt-color);
     text-decoration: none;
 }
 
@@ -30,17 +44,17 @@ a {
     grid-template-rows: 1fr 1fr;
     /* grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); */
     border: solid;
-    border-color: black;
+    border-color: var(--grid-bg-color);
     border-width: 1px 0px 1px 0px;
     grid-gap: 1px;
-    background-color: black;
+    background-color: var(--grid-bg-color);
 
 }
 
 .stats__content {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--main-bg-color);
     justify-content: space-between;
     padding: 24px;
 }
@@ -74,7 +88,25 @@ a {
 }
 
 .placeholder {
-    background-color: white;
+    background-color: var(--main-bg-color);
     grid-column: 1 / 2;
     grid-row: 2;
+}
+
+.fiction {
+    background: var(--fiction-tag-color);
+}
+
+.nonfiction {
+    background: var(--nonfiction-tag-color);
+
+}
+
+.tech {
+    background: var(--tech-tag-color);
+
+}
+
+.theory {
+    background-color: var(--theory-tag-color);
 }
