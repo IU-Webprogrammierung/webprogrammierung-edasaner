@@ -3,12 +3,39 @@
     --main-bg-color: #FFFFFF;
     --grid-bg-color: #000000;
     --main-txt-color: #000000;
+    /* tag color variables */
+    --fiction-tag-color: #ECB8FF;
+    --nonfiction-tag-color: #BBDAFF;
+    --tbr-tag-color: #FEC963;
+    --theory-tag-color: #FFAAAA;
+    --history-tag-color: #BCD49E;
+    --tech-tag-color: #EDEDED;
+
+    /* font variables */
+    --ff-prim: 'Helvetica', 'Arial', sans-serif;
+    --ff-sec: 'Times', Times, serif;
+
+    --fw-prim: 400;
+    --fw-sec: 300;
+
+    --fs-prim-s: 1rem;
+    /* 16 */
+    --fs-prim-m: 1.25rem;
+    /* 20 */
+    --fs-prim-l: 1.5rem;
+    /* 24 */
+    --fs-sec-m: 1.25rem;
+    /* 20 */
+    --fs-sec-l: 2rem;
+    /* 32 */
+    --fs-sec-xl: 4rem;
+    /* 64 */
 
 }
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--ff-prim);
     margin: 0px;
 }
 
@@ -26,8 +53,15 @@ body {
 }
 
 a {
-    color: black;
+    color: var(--main-txt-color);
+    font-family: var(--ff-prim);
     text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: var(--ff-sec);
+    font-size: var(--fs-sec-l);
+    font-weight: var(--fw-sec);
 }
 
 .book-display {
@@ -51,7 +85,7 @@ a {
 .content {
     padding: 1.5rem;
     background-color: var(--main-bg-color);
-    
+
 }
 
 .img-stack {
