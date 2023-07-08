@@ -135,3 +135,10 @@ h1, h2, h3 {
     flex-direction: column;
 }
 */
+
+@media (max-width: 475px) {
+    .book-display {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
