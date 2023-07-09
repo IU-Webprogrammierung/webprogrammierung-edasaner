@@ -153,3 +153,11 @@ p {
 .theory {
     background-color: var(--theory-tag-color);
 }
+
+@media (max-width: 600px) {
+    .stats {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+   
