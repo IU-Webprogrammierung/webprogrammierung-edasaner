@@ -123,6 +123,8 @@ p {
 
 .img-stack {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: space-between;
 }
 
@@ -156,7 +158,24 @@ p {
 
 @media (max-width: 600px) {
     .stats {
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fit, 1fr);
     }
+
+    .stats__content {
+        overflow: auto;
+    }
+
+    .favorites {
+        grid-column: 1 / 2;
+        flex-wrap: wrap;
+    }
+    
+    .placeholder {
+        display: none;
+    }
+
+    
 }
    
