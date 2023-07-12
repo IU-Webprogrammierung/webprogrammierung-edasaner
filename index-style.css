@@ -90,7 +90,9 @@ h1, h2, h3 {
 
 .img-stack {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
 }
 
 /* .display-simple {
@@ -142,6 +144,7 @@ h1, h2, h3 {
         grid-template-rows: 1fr 1fr 1fr;
     }
 }
+
 
 @media (max-width: 640px) {
     .book-display {

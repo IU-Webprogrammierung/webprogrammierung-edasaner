@@ -80,7 +80,7 @@ p {
     padding: 0px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     /* grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); */
     border: solid;
     border-color: var(--grid-bg-color);
@@ -154,11 +154,9 @@ p {
     background-color: var(--theory-tag-color);
 }
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
     .stats {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto
-        );
+        grid-template-columns: 1fr 1fr;
     }
 }
    
