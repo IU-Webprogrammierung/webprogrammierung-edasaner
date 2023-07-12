@@ -154,10 +154,11 @@ p {
     background-color: var(--theory-tag-color);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 475px) {
     .stats {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto
+        );
     }
 }
    
