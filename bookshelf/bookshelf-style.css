@@ -137,7 +137,7 @@ a {
 }
 
 .bookshelf__item>a {
-  text-decoration: none;
+  order: -1;
 }
 
 .tags {
