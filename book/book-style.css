@@ -40,6 +40,11 @@ body {
 }
 
 /*top navigation bar*/
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
 .navigation {
     display: flex;
     flex-flow: row wrap;
@@ -51,6 +56,25 @@ body {
     padding: 0;
     list-style: none;
 }
+
+.hamburger-menu {
+    width: 30px;
+    height: 23px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background: #000000;
+    border-radius: 100px;
+}
+
 a {
     color: var(--main-txt-color);
     font-family: var(--ff-prim);
@@ -155,9 +179,8 @@ p {
     margin: 0 80px 0 120px;
 }
 
-.book-detail > img {
+.book-detail>img {
     order: -1
-
 }
 
 .recommendations {
@@ -180,8 +203,8 @@ p {
     gap: 24px;
 }
 
-.recommendations__item > img {
-   align-self: start;
+.recommendations__item>img {
+    align-self: start;
 }
 
 main {
@@ -236,12 +259,49 @@ footer {
         padding: 16px 0;
     }
 
-    .book-detail__bottom > p {
+    .book-detail__bottom>p {
         margin: 0;
     }
 }
 
 @media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .book-display {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .navigation {
+        display: none;
+        margin: 0;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        margin: 0;
+        height: min-content;
+        width: 100%;
+        background-color: var(--main-bg-color)
+    }
+
+    nav li {
+        height: min-content;
+        padding: 16px;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    #hamburger-menu:checked~ul {
+        display: block;
+    }
+
+
     .book-detail {
         flex-direction: column;
         margin: 0;
@@ -253,7 +313,7 @@ footer {
         padding: 16px 0;
     }
 
-    .book-detail__bottom > p {
+    .book-detail__bottom>p {
         margin: 0;
     }
 }
@@ -270,7 +330,7 @@ footer {
         padding: 16px 0;
     }
 
-    .book-detail__bottom > p {
+    .book-detail__bottom>p {
         margin: 0;
     }
 }
@@ -287,7 +347,7 @@ footer {
         padding: 16px 0;
     }
 
-    .book-detail__bottom > p {
+    .book-detail__bottom>p {
         margin: 0;
     }
 }
