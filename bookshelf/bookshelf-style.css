@@ -209,8 +209,12 @@ a {
 }
 
 .hover-wrapper__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
   position: absolute;
-  background-color: blue;
+  background-color: white;
   inset: 0;
   /* height: 50px; */
   /* width: 100%;
