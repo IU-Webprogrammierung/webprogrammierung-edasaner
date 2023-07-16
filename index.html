@@ -6,59 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eda's Seite</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index-style.css">
 </head>
+
 
 <body>
     <!--navigation bar-->
     <nav>
-        <div>
-            <ul class="navigation">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="bookshelf/bookshelf.html">Bookshelf</a>
-                </li>
-                <li>
-                    <a href="/stats/statistics.html">Statistics</a>
-                </li>
-            </ul>
-        </div>
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+        <ul class="navigation">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="bookshelf/bookshelf.html">Bookshelf</a>
+            </li>
+            <li>
+                <a href="./stats/statistics.html">Statistics</a>
+            </li>
+        </ul>
     </nav>
-
-    <main class="book-display">
-        <!--first element-->
-        <article class="content grid-span-2">
-                <h1>
+    <div class="container">
+        <main class="book-display">
+            <!--first element-->
+            <article class="content grid-span-2">
+                <h2>
                     Currently Reading
-                </h1>
-                <img src="/images/olga_ravn.jpg" width="200" />   
-        </article>
-        <!--second element-->
-        <article class="content display-simple">
+                </h2>
+                <img src="./images/img_large/olga_ravn.jpg" />
+            </article>
+            <!--second element-->
+            <article class="content display-simple">
                 <h2>
                     Next Up
                 </h2>
-                <img src="/images/ken_kocienda.jpeg" width="100" />
-        </article>
-        <!--third element-->
-        <article class="content display-complex">
+                <img src="images/ken_kocienda.jpeg" width="100" />
+            </article>
+            <!--third element-->
+            <article class="content display-complex">
                 <h2>
                     Recently Read
                 </h2>
-                <img src="/images/elena_ferrante.jpg" width="100" />
-                <img src="/images/jia_tolentino.jpg" width="100" />
-                <img src="/images/lenin.jpeg" width="100" />
-                <img src="/images/david_madden.jpg" width="100" />
-        </article>
-    </main>
-    
-    <!--footer-->
-    <footer>
-        Eda Saner 2023
-    </footer>
-</body>
-</body>
+                <div class="img-stack">
+                    <img src="images/elena_ferrante.jpg" width="100" />
+                    <img src="images/jia_tolentino.jpg" width="100" />
+                    <img src="images/lenin.jpeg" width="100" />
+                    <img src="images/david_madden.jpg" width="100" />
+                </div>
 
+            </article>
+        </main>
+    </div>
+</body>
+ <!--footer-->
+        <footer>
+            Eda Saner 2023
+        </footer>
 </html>

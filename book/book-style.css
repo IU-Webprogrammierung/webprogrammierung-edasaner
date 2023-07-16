@@ -1,9 +1,53 @@
+/* define variables */
+:root {
+    /* general color variables */
+    --main-bg-color: #FFFFFF;
+    --grid-bg-color: #000000;
+    --main-txt-color: #000000;
+    /* tag color variables */
+    --fiction-tag-color: #ECB8FF;
+    --nonfiction-tag-color: #BBDAFF;
+    --tbr-tag-color: #FEC963;
+    --theory-tag-color: #FFAAAA;
+    --history-tag-color: #BCD49E;
+    --tech-tag-color: #EDEDED;
+
+    /* font variables */
+    --ff-prim: 'Helvetica', 'Arial', sans-serif;
+    --ff-sec: 'Times', Times, serif;
+
+    --fw-prim: 400;
+    --fw-sec: 300;
+
+    --fs-prim-s: 1rem;
+    /* 16 */
+    --fs-prim-m: 1.25rem;
+    /* 20 */
+    --fs-prim-l: 1.5rem;
+    /* 24 */
+    --fs-sec-m: 1.25rem;
+    /* 20 */
+    --fs-sec-l: 2rem;
+    /* 32 */
+    --fs-sec-xl: 4rem;
+    /* 64 */
+}
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--ff-prim);
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /*top navigation bar*/
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
 .navigation {
     display: flex;
     flex-flow: row wrap;
@@ -15,29 +59,51 @@ body {
     padding: 0;
     list-style: none;
 }
+
+.hamburger-menu {
+    width: 30px;
+    height: 23px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    height: 4px;
+    width: 100%;
+    background: #000000;
+    border-radius: 100px;
+}
+
 a {
-    color: black;
+    color: var(--main-txt-color);
+    font-family: var(--ff-prim);
     text-decoration: none;
 }
 
 h2 {
-    font-family: 'Merriweather';
-    font-style: italic;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
+    font-family: var(--ff-sec);
+    font-weight: var(--fw-sec);
+    font-size: var(--fs-sec-l);
     letter-spacing: 0.02em;
     margin: 0px;
 }
 
 h3 {
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
+    font-family: var(--ff-prim);
+    font-weight: var(--fw-prim);
+    font-size: var(--fs-prim-m);
     letter-spacing: 0.02em;
     margin: 0;
+}
+
+p {
+    font-family: var(--ff-prim);
+    font-size: var(--fs-prim-s);
+    font-weight: var(--fw-prim);
 }
 
 .tags {
@@ -51,8 +117,26 @@ h3 {
     border-radius: 100px;
 }
 
+.tag-stack__text {
+    font-size: 0.875rem;
+}
+
 .genre {
     padding: 0px;
+}
+
+.fiction {
+    background: var(--fiction-tag-color);
+}
+
+.nonfiction {
+    background: var(--nonfiction-tag-color);
+
+}
+
+.toberead {
+    background: var(--tbr-tag-color);
+
 }
 
 .book-detail__title-author {
@@ -69,7 +153,21 @@ h3 {
     gap: 24px;
 }
 
-.book-title__description {
+.book-detail__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 16px 32px;
+    /* padding: 0 25% 0 0; */
+}
+
+.text {
+    display: flex;
+    flex: 1;
+
+}
+
+.book-title__description-review {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -80,19 +178,19 @@ h3 {
     display: inline-flex;
     align-items: flex-start;
     gap: 48px;
-    padding: 24px;
+    padding: 32px;
+    margin: 0 80px 0 120px;
 }
 
-.book-detail > img {
+.book-detail>img {
     order: -1
-
 }
 
 .recommendations {
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     border: solid;
     border-color: black;
     border-width: 1px 0px 0px 0px;
@@ -105,14 +203,154 @@ h3 {
     flex-flow: row;
     padding: 2rem;
     background-color: white;
+    gap: 24px;
 }
 
-.recommendations__item > img {
-   align-self: start;
+.recommendations__item>img {
+    align-self: start;
 }
 
 main {
-    display: flex;
+    display: inline-flex;
     flex-flow: column;
     justify-content: space-between;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+footer {
+    border: solid;
+    border-color: black;
+    border-width: 1px 0px 0px 0px;
+    padding: 16px;
+}
+
+
+@media (max-width: 1536px) {
+    .book-detail__bottom {
+        gap: 32px;
+        padding: 16px 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    .book-detail {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .book-detail__bottom {
+        gap: 32px;
+        padding: 16px 0;
+    }
+
+    .recommendations {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .book-detail {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .book-detail__bottom {
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px 0;
+    }
+
+    .book-detail__bottom>p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .book-display {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .navigation {
+        display: none;
+        margin: 0;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        margin: 0;
+        height: min-content;
+        width: 100%;
+        background-color: var(--main-bg-color)
+    }
+
+    nav li {
+        height: min-content;
+        padding: 16px;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    #hamburger-menu:checked~ul {
+        display: block;
+    }
+
+
+    .book-detail {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .book-detail__bottom {
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px 0;
+    }
+
+    .book-detail__bottom>p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .book-detail {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .book-detail__bottom {
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px 0;
+    }
+
+    .book-detail__bottom>p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 475px) {
+    .book-detail {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .book-detail__bottom {
+        flex-direction: column;
+        gap: 32px;
+        padding: 16px 0;
+    }
+
+    .book-detail__bottom>p {
+        margin: 0;
+    }
 }

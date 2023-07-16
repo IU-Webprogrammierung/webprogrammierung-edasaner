@@ -1,66 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stats-style.css">
     <title>Document</title>
 </head>
+
 <body>
     <!--navigation bar-->
     <nav>
-        <div>
-            <ul class="navigation">
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="/bookshelf/bookshelf.html">Bookshelf</a>
-                </li>
-                <li>
-                    <a href="statistics.html">Statistics</a>
-                </li>
-            </ul>
-        </div>
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+        <ul class="navigation">
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
+            </li>
+            <li>
+                <a href="statistics.html">Statistics</a>
+            </li>
+        </ul>
     </nav>
-<h1>
-    Stats
-</h1>
-<h2>
-    Book Count 2023
-</h2>
-<h2>
-    70% of all Books are written by women
-</h2>
-<p>
-    *Despite their significant contributions, women authors have often been overlooked and marginalized in the literary world. Their works have been undervalued, dismissed as "women's fiction" or confined to specific genres, limiting their recognition and reach.
-</p>
-<h2>
-    Genre Breakdown
-</h2>
-<button class="tags fiction" type="button">
-    <p>non fiction</p>
-</button>
-<button class="tags fiction" type="button">
-    <p>fiction</p>
-</button><button class="tags fiction" type="button">
-    <p>history</p>
-</button>
-</button><button class="tags fiction" type="button">
-    <p>theory</p>
-</button>
-<h2>
-    2023 Favorites
-</h2>
-<img src="/images/jeanette_winterson.jpg" height="240px" />
-<img src="/images/lenin.jpeg" height="240px" />
-<img src="/images/samantha_shannon.jpg" height="240px" />
-<img src="/images/ruben_pater.jpeg" height="240px" />
 
- <!--footer-->
- <footer>
-    Eda Saner 2023
-</footer>
+    <h1>
+        Stats
+    </h1>
+    <main class="stats">
+        <article class="stats__content">
+            <h2>
+                20 Books
+            </h2>
+            <p>
+                Book Challenge 2022: 12 Books
+            </p>
+        </article>
+        <article class="stats__content">
+            <h2>
+                70% of all Books are written by women
+            </h2>
+            <p>
+                *Despite their significant contributions, women authors have often been overlooked and marginalized in
+                the
+                literary world. Their works have been undervalued, dismissed as "women's fiction" or confined to
+                specific
+                genres, limiting their recognition and reach.
+            </p>
+        </article>
+        <article class="stats__content">
+            <h2>
+                Genre Breakdown
+            </h2>
+            <div class="tag-stack">
+                <button class="tags nonfiction" type="button">
+                    <p class="tag-stack__text">non fiction</p>
+                </button>
+                <button class="tags fiction" type="button">
+                    <p class="tag-stack__text">fiction</p>
+                </button><button class="tags tech" type="button">
+                    <p class="tag-stack__text">tech</p>
+                </button>
+                </button><button class="tags theory" type="button">
+                    <p class="tag-stack__text">theory</p>
+                </button>
+            </div>
+        </article>
+        <article class="stats__content favorites">
+            <h2>
+                2023 Favorites
+            </h2>
+            <div class="img-stack">
+                <img src="../images/jeanette_winterson.jpg" height="240px" />
+                <img src="../images/lenin.jpeg" height="240px" />
+                <img src="../images/samantha_shannon.jpg" height="240px" />
+                <img src="../images/ruben_pater.jpeg" height="240px" />
+            </div>
+        </article>
+        <article class="placeholder">
+        </article>
+    </main>
+
+
+    
 
 </body>
+<!--footer-->
+    <footer>
+        Eda Saner 2023
+    </footer>
 </html>

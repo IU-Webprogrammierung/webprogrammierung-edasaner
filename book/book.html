@@ -12,89 +12,99 @@
 <body>
     <!--navigation bar-->
     <nav>
-        <div>
-            <ul class="navigation">
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="/bookshelf/bookshelf.html">Bookshelf</a>
-                </li>
-                <li>
-                    <a href="/stats/statistics.html">Statistics</a>
-                </li>
-            </ul>
-        </div>
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+        <ul class="navigation">
+            <li>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
+            </li>
+            <li>
+                <a href="../stats/statistics.html">Statistics</a>
+            </li>
+        </ul>
     </nav>
 
     <!--book detail-->
     <main>
-    <article class="book-detail">
-        <div class="book-detail__description-review">
-            <div class="book-detail__top">
-                <div class="book-detail__title-author">
-                    <h2>Book Title</h2>
-                    <h3>Author Name</h3>
+        <article class="book-detail">
+            <div class="book-detail__description-review">
+                <div class="book-detail__top">
+                    <div class="book-detail__title-author">
+                        <h2>My Brilliant Friend</h2>
+                        <h3>Elena Ferrante</h3>
+                    </div>
+                    <div class="tags genre">
+                        <button class="tags fiction" type="button">
+                            <p class="tag-stack__text">fiction</p>
+                        </button>
+                    </div>
                 </div>
-                <div class="tags genre">
-                    <button class="tags fiction" type="button">
-                        <p>Tag name</p>
-                    </button>
-                    <button class="tags fiction" type="button">
-                        <p>Tag name</p>
-                    </button>
+                <div class="book-detail__bottom">
+                    <p class="text book-detail__description">
+                        The story of Elena and Lila begins in the 1950s in a poor neighbourhood on the outskirts of
+                        Naples.
+                        Growing up
+                        on these tough streets the two girls learn to rely on each other ahead of anyone else, as their
+                        friendship,
+                        becomes a not always perfect shelter from hardship. Through the lives of Elena and Lila, we see
+                        a
+                        country
+                        undergoing momentous change.
+                    </p>
+                    <!-- <h3>Review:</h3> -->
+                    <p class="text book-detail__review">
+                        Lörem ipsum anade ådat detelig, tinera. Diheten berar: poss. Seskade larosamma hemibelt soliga.
+                        Irade
+                        diatyngar. Geolig jopepegt till ninyvis. Trarokaning näbåv inte peliga mikrons. Du kan vara
+                        Decis opp bede, höck. Dolall roning. Sol mism prebåpäse sötesm. Nångar ijolärade ogt. Telang
+                        kasade
+                        kvasigt laryvörar besade. Antiteng pokunde.
+                        Päsäna asade hemikäl. Ultravar plade åren geogisk. Ser nis. Höheten råninade: dong eurorän.
+                        Antiläl per
+                        beska tills spev. Pseudojotebel ladovis oaktat preräna pose. Du kan vara
+
+                    </p>
                 </div>
+
             </div>
-            <p>
-                The story of Elena and Lila begins in the 1950s in a poor neighbourhood on the outskirts of Naples.
-                Growing up
-                on these tough streets the two girls learn to rely on each other ahead of anyone else, as their
-                friendship,
-                becomes a not always perfect shelter from hardship. Through the lives of Elena and Lila, we see a
-                country
-                undergoing momentous change.
-            </p>
-            <h3>Review:</h3>
-            <p>
-                Lörem ipsum anade ådat detelig, tinera. Diheten berar: poss. Seskade larosamma hemibelt soliga. Irade
-                diatyngar. Geolig jopepegt till ninyvis. Trarokaning näbåv inte peliga mikrons. Du kan vara
-                Decis opp bede, höck. Dolall roning. Sol mism prebåpäse sötesm. Nångar ijolärade ogt. Telang kasade
-                kvasigt laryvörar besade. Antiteng pokunde.
-                Päsäna asade hemikäl. Ultravar plade åren geogisk. Ser nis. Höheten råninade: dong eurorän. Antiläl per
-                beska tills spev. Pseudojotebel ladovis oaktat preräna pose. Du kan vara
-
-            </p>
-        </div>
-        <img src="/images/elena_ferrante.jpg" height="250px" />
-    </article>
+            <img src="../images/img_large/elena_ferrante.jpg" height="250px" />
+        </article>
 
 
-    <!--more books-->
-    <div class="recommendations">
-        <article class="recommendations__item">
+        <!--more books-->
+        <div class="recommendations">
+            <article class="recommendations__item">
                 <img src="/images/samantha_shannon.jpg" height="250px" />
-            <button class="tags fiction" type="button">
-                <p>fiction</p>
-            </button>
-            
-        </article>
-        <article class="recommendations__item">
-            <img src="/images/taylor_jenkings_reid.jpg" height="250px" />
-            <button class="tags fiction" type="button">
-                <p>fiction</p>
-            </button>
-        </article>
-        <article class="recommendations__item">
-            <img src="/images/virginia_woolf.jpg" height="250px" />
-            <button class="tags fiction" type="button">
-                <p>fiction</p>
-            </button>
-        </article>
-    </div>
-</main>
+                <button class="tags fiction" type="button">
+                    <p class="tag-stack__text">fiction</p>
+                </button>
+
+            </article>
+            <article class="recommendations__item">
+                <img src="/images/taylor_jenkings_reid.jpg" height="250px" />
+                <button class="tags fiction" type="button">
+                    <p class="tag-stack__text">fiction</p>
+                </button>
+            </article>
+            <article class="recommendations__item">
+                <img src="/images/virginia_woolf.jpg" height="250px" />
+                <button class="tags fiction" type="button">
+                    <p class="tag-stack__text">fiction</p>
+                </button>
+            </article>
+
+        </div>
+    </main>
 
 
-<!-- 
+    <!-- 
     <img src="/images/samantha_shannon.jpg" height="240px" />
     <img src="/images/taylor_jenkings_reid.jpg" height="240px" />
     <img src="/images/virginia_woolf.jpg" height="240px" />
@@ -107,11 +117,12 @@
         <p>Tag name</p>
     </button>-->
 
-    <!--footer-->
-    <footer>
-        Eda Saner 2023
-    </footer>
+
 
 </body>
+<!--footer-->
+<footer>
+    Eda Saner 2023
+</footer>
 
 </html>
