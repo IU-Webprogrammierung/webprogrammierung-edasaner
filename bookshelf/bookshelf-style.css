@@ -240,6 +240,14 @@ a {
   opacity: 1;
 }
 
+#book-link {
+  opacity: 0;
+}
+
+#book-link:hover {
+  opacity: 1;
+}
+
 /* ===FOOTER=== */
 
 footer {
