@@ -75,6 +75,14 @@ nav input[type="checkbox"] {
   border-radius: 100px;
 }
 
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.navigation a.active {
+   text-decoration: underline;
+}
+
 a {
     color: var(--main-txt-color);
     font-family: var(--ff-prim);

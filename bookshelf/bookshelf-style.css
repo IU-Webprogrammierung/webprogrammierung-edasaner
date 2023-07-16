@@ -103,13 +103,21 @@ nav input[type="checkbox"] {
   border-radius: 100px;
 }
 
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+.navigation a.active {
+ text-decoration: underline;
+}
+
 a {
   color: var(--main-txt-color);
   text-decoration: none;
 }
 
 .bookshelf {
-  position: relative;
+  /* position: relative; */
   max-width: 100%;
   margin: 0px;
   padding: 0px;
