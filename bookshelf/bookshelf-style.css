@@ -139,6 +139,8 @@ a {
   background-color: var(--main-bg-color);
   overflow: auto;
   flex-wrap: wrap;
+  position: relative;
+  flex: 1;
 }
 
 .bookshelf__item>img {
@@ -214,6 +216,7 @@ a {
 .hover-wrapper {
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 
 .hover-wrapper__content {
