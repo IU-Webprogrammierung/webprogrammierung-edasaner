@@ -44,6 +44,11 @@ body {
 
 /*top navigation bar*/
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
 nav input[type="checkbox"] {
     visibility: hidden;
 }
