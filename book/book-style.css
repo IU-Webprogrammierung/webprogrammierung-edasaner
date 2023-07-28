@@ -47,6 +47,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-content: baseline;
 }
 
 nav input[type="checkbox"] {
