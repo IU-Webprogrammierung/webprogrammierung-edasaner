@@ -159,14 +159,6 @@ nav input[type="checkbox"] {
   gap: 32px;
 }
 
-.tag-stack {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  gap: 10px;
-}
-
 .bookshelf__item>h2 {
   margin: 1rem 1rem 0rem 0rem;
 }
@@ -192,6 +184,14 @@ nav input[type="checkbox"] {
   padding: 0px 12px;
   gap: 10px;
   border-radius: 100px;
+}
+
+.tag-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: 10px;
 }
 
 .fiction {
