@@ -178,28 +178,30 @@ footer {
     }
 
     .menu-wrap .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         position: absolute;
         top: 0;
         right: 0;
         width: 40px;
         height: 40px;
         padding: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background-color: var(--main-bg-color);
         z-index: 1;
 
     }
 
     .menu-wrap .hamburger>div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         position: relative;
         width: 100%;
         height: 2px;
         background-color: var(--main-txt-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
         transition: all 0.2s ease;
     }
 
@@ -240,6 +242,10 @@ footer {
     }
 
     .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         position: fixed;
         top: 0;
         right: 0;
@@ -247,21 +253,18 @@ footer {
         height: 100vh;
         visibility: hidden;
         overflow-y: hidden;
-        ;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .menu-wrap .menu>div {
-        background: var(--main-bg-color);
-        width: 100%;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         flex: none;
         align-items: center;
         justify-content: center;
+
+        background: var(--main-bg-color);
+        width: 100%;
+        height: 100vh;
         overflow-y: hidden;
         scrollbar-width: none;
     }
