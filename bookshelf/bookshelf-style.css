@@ -278,7 +278,7 @@ footer {
   }
 }
 
-/* Max-width 1536 px*/
+/* Max-width 1280 px*/
 @media (max-width: 1280px) {
   .placeholder {
     grid-column: -2 / -1;
