@@ -22,9 +22,9 @@
 
     <header>
         <img id="logo" src="../images/logo.svg">
-        <nav>
+        <nav aria-label="main menu">
             <div class="menu-wrap">
-                <input type="checkbox" id="toggle">
+                <input aria-expanded="false" type="checkbox" id="toggle">
                 <div class="hamburger">
                     <div></div>
                 </div>
@@ -32,7 +32,7 @@
                     <div>
                         <ul class="navigation">
                             <li>
-                                <a class="active" href="index.html">Home</a>
+                                <a aria-current="page" href="index.html">Home</a>
                             </li>
                             <li>
                                 <a href="../bookshelf/bookshelf.html">Bookshelf</a>
@@ -41,7 +41,6 @@
                                 <a href="../stats/statistics.html">Statistics</a>
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </div>
@@ -52,37 +51,34 @@
     Book display Grid
     ------------------------------------------------------------------------->
 
-    <div class="container">
-        <main class="book-display">
-            <!--first element-->
-            <article class="content grid-span-2">
-                <h2>
-                    Currently Reading
-                </h2>
-                <img src="./images/img_large/olga_ravn.jpg" />
-            </article>
-            <!--second element-->
-            <article class="content display-simple">
-                <h2>
-                    Next Up
-                </h2>
-                <img src="./images/img_small/ken_kocienda.jpeg" />
-            </article>
-            <!--third element-->
-            <article class="content display-complex">
-                <h2>
-                    Recently Read
-                </h2>
-                <div class="img-stack">
-                    <img src="./images/img_small/elena_ferrante.jpg" />
-                    <img src="./images/img_small/jia_tolentino.jpg" width="100" />
-                    <img src="./images/img_small/lenin.jpeg" width="100" />
-                    <img src="./images/img_small/david_madden.jpg" width="100" />
-                </div>
-
-            </article>
-        </main>
-    </div>
+    <main role="grid" class="book-display">
+        <!--first element-->
+        <article role="gridcell" class="content grid-span-2">
+            <h2>
+                Currently Reading
+            </h2>
+            <img src="./images/img_large/olga_ravn.jpg" />
+        </article>
+        <!--second element-->
+        <article role="gridcell" class="content display-simple">
+            <h2>
+                Next Up
+            </h2>
+            <img src="./images/img_small/ken_kocienda.jpeg" />
+        </article>
+        <!--third element-->
+        <article role="gridcell" class="content display-complex">
+            <h2>
+                Recently Read
+            </h2>
+            <div class="img-stack">
+                <img src="./images/img_small/elena_ferrante.jpg" />
+                <img src="./images/img_small/jia_tolentino.jpg" width="100" />
+                <img src="./images/img_small/lenin.jpeg" width="100" />
+                <img src="./images/img_small/david_madden.jpg" width="100" />
+            </div>
+        </article>
+    </main>
 </body>
 
 <!--------------------------------------------------------------------------

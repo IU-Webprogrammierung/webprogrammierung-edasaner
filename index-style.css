@@ -97,7 +97,7 @@ nav input[type="checkbox"] {
     text-decoration: underline;
 }
 
-.navigation a.active {
+.navigation [aria-current="page"] {
     text-decoration: underline;
 }
 
