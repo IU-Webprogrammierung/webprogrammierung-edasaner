@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-----------------------------------------------------------------------------
+   Head
+   ---------------------------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,83 +16,68 @@
 </head>
 
 <body>
-    <!--navigation bar-->
+
+    <!--------------------------------------------------------------------------
+    Logo and Navigation
+    ------------------------------------------------------------------------>
+
     <header>
         <img id="logo" src="../images/logo.svg">
-    <nav>
-        <div class="menu-wrap">
-            <input type="checkbox" id="toggle">
-            <div class="hamburger">
-                <div></div>
-            </div>
-            <div class="menu">
-                <div>
-                    <ul class="navigation">
-                        <li>
-                            <a href="../index.html">Home</a>
-                        </li>
-                        <li>
-                            <a class="active" href="bookshelf.html">Bookshelf</a>
-                        </li>
-                        <li>
-                            <a href="../stats/statistics.html">Statistics</a>
-                        </li>
-                    </ul>
+        <nav>
+            <div class="menu-wrap">
+                <input type="checkbox" id="toggle">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <ul class="navigation">
+                            <li>
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="active" href="bookshelf.html">Bookshelf</a>
+                            </li>
+                            <li>
+                                <a href="../stats/statistics.html">Statistics</a>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
-    <!-- <nav>
-        <input type="checkbox" id="hamburger-menu">
-        <label for="hamburger-menu" class="hamburger-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </label>
-        <ul class="navigation">
-            <li>
-                <a href="../index.html">Home</a>
-            </li>
-            <li>
-                <a class="active" href="bookshelf.html">Bookshelf</a>
-            </li>
-            <li>
-                <a href="../stats/statistics.html">Statistics</a>
-            </li>
-        </ul>
-    </nav> -->
 
-    <!--headline-->
+    <!--------------------------------------------------------------------------
+    Bookshelf Grid
+    ------------------------------------------------------------------------->
+
     <h1>Bookshelf</h1>
-    <!--boohshelf grid-->
-    <section class="main container">
+    <!-- <section class="main container"> -->
         <main class="bookshelf">
+            <!-- Ferrante -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
-                    <!-- <a href="../book/book.html"> -->
-                        <h2>
-                            My Brilliant Friend
-                        </h2>
-                        <h3>
-                            Elena Ferrante
-                        </h3>
-                        <div class="bookshelf__media">
-                            <img src="../images/img_medium/elena_ferrante.jpg" />
-                            <div class="tag-stack">
-                                <button class="tags nonfiction" type="button">
-                                    <p>nonfiction</p>
-                                </button>
-                                <button class="tags toberead" type="button">
-                                    <p>to be read</p>
-                                </button>
-                            </div>
+                    <h2>
+                        My Brilliant Friend
+                    </h2>
+                    <h3>
+                        Elena Ferrante
+                    </h3>
+                    <div class="bookshelf__media">
+                        <img src="../images/img_medium/elena_ferrante.jpg" />
+                        <div class="tag-stack">
+                            <button class="tags nonfiction" type="button">
+                                <p>nonfiction</p>
+                            </button>
+                            <button class="tags toberead" type="button">
+                                <p>to be read</p>
+                            </button>
                         </div>
-                    <!-- </a> -->
+                    </div>
                     <a id="book-link" href="../book/book.html">
                         <div class="hover-wrapper__content fade">
-
                             <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                             <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                             <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -96,10 +85,10 @@
                             <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                         </div>
                     </a>
-
                 </article>
             </div>
 
+            <!-- Ravn -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -125,11 +114,11 @@
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-
                     </div>
-
                 </article>
             </div>
+
+            <!-- Tartt -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -151,6 +140,8 @@
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     </div>
             </div>
+
+            <!-- Winterson -->
             <div class="hover-wrapper">
                 </article>
                 <article class="bookshelf__item">
@@ -173,9 +164,10 @@
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     </div>
-
                 </article>
             </div>
+
+            <!-- Frazier -->
             <article class="bookshelf__item">
                 <h2>
                     Pizza Girl
@@ -196,6 +188,7 @@
                 </div>
             </article>
 
+            <!-- Madden, Marcuse -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -220,6 +213,7 @@
                 </article>
             </div>
 
+            <!-- Davis -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -244,6 +238,7 @@
                 </article>
             </div>
 
+            <!-- Pater -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -268,6 +263,7 @@
                 </article>
             </div>
 
+            <!-- Tolentino -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -290,6 +286,7 @@
                 </article>
             </div>
 
+            <!-- Kuang, Fabricant -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -313,6 +310,7 @@
                 </article>
             </div>
 
+            <!-- Shannon -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -336,6 +334,8 @@
                     </div>
                 </article>
             </div>
+
+            <!-- Reid -->
             <div class="hover-wrapper">
                 <article class="bookshelf__item">
                     <h2>
@@ -358,6 +358,7 @@
                 </article>
             </div>
 
+            <!-- Kocienda -->
             <article class="bookshelf__item">
                 <h2>
                     Creatice Selection
@@ -378,6 +379,7 @@
                 </div>
             </article>
 
+            <!-- Woolf -->
             <article class="bookshelf__item">
                 <h2>
                     Mrs. Dolloway
@@ -398,6 +400,7 @@
                 </div>
             </article>
 
+            <!-- Tarnoff -->
             <article class="bookshelf__item">
                 <h2>
                     Internet for the People
@@ -417,14 +420,17 @@
                     </div>
                 </div>
             </article>
+
+            <!-- White Space -->
             <article class="placeholder">
             </article>
         </main>
-    </section>
-
-
-
 </body>
+
+<!--------------------------------------------------------------------------
+    Footer
+    ------------------------------------------------------------------------>
+
 <footer>
     Eda Saner 2023
 </footer>
