@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-----------------------------------------------------------------------------
+   Head
+   ---------------------------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,40 +15,49 @@
 </head>
 
 <body>
-    <!--navigation bar-->
+
+    <!--------------------------------------------------------------------------
+    Logo and Navigation
+    ------------------------------------------------------------------------>
+
     <header>
         <img id="logo" src="../images/logo.svg">
-    <nav>
-        <div class="menu-wrap">
-            <input type="checkbox" id="toggle">
-            <div class="hamburger">
-                <div></div>
-            </div>
-            <div class="menu">
-                <div>
-                    <ul class="navigation">
-                        <li>
-                            <a href="../index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="../bookshelf/bookshelf.html">Bookshelf</a>
-                        </li>
-                        <li>
-                            <a  class="active" href="statistics.html">Statistics</a>
-                        </li>
-                    </ul>
+        <nav>
+            <div class="menu-wrap">
+                <input type="checkbox" id="toggle">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <ul class="navigation">
+                            <li>
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
+                            </li>
+                            <li>
+                                <a class="active" href="statistics.html">Statistics</a>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
-    
+
+    <!--------------------------------------------------------------------------
+    Stats Grid
+    ------------------------------------------------------------------------->
 
     <h1>
         Stats
     </h1>
     <main class="stats">
+
+        <!-- Stats Content -->
         <article class="stats__content">
             <h2>
                 20 Books
@@ -69,6 +82,8 @@
             <h2>
                 Genre Breakdown
             </h2>
+
+            <!-- Tags -->
             <div class="tag-stack">
                 <button class="tags nonfiction" type="button">
                     <p class="tag-stack__text">non fiction</p>
@@ -83,6 +98,8 @@
                 </button>
             </div>
         </article>
+
+        <!-- Favorites -->
         <article class="stats__content favorites">
             <h2>
                 2023 Favorites
@@ -97,13 +114,14 @@
         <article class="placeholder">
         </article>
     </main>
-
-
-    
-
 </body>
-<!--footer-->
-    <footer>
-        Eda Saner 2023
-    </footer>
+
+<!--------------------------------------------------------------------------
+    Footer
+    ------------------------------------------------------------------------>
+    
+<footer>
+    Eda Saner 2023
+</footer>
+
 </html>
