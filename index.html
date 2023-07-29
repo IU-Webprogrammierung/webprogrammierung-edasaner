@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-----------------------------------------------------------------------------
+   Head
+   ---------------------------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,56 +14,44 @@
     <link rel="stylesheet" href="index-style.css">
 </head>
 
-
 <body>
-    <!--navigation bar-->
+    
+<!--------------------------------------------------------------------------
+    Logo and Navigation
+    ------------------------------------------------------------------------>
+
     <header>
         <img id="logo" src="../images/logo.svg">
-    <nav>
-        <div class="menu-wrap">
-            <input type="checkbox" id="toggle">
-            <div class="hamburger">
-                <div></div>
-            </div>
-            <div class="menu">
-                <div>
-                    <ul class="navigation">
-                        <li>
-                            <a class="active" href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="../bookshelf/bookshelf.html">Bookshelf</a>
-                        </li>
-                        <li>
-                            <a href="../stats/statistics.html">Statistics</a>
-                        </li>
-                    </ul>
+        <nav>
+            <div class="menu-wrap">
+                <input type="checkbox" id="toggle">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <ul class="navigation">
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
+                            </li>
+                            <li>
+                                <a href="../stats/statistics.html">Statistics</a>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
-    
-    <!-- <nav>
-        <input type="checkbox" id="hamburger-menu">
-        <label for="hamburger-menu" class="hamburger-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </label>
-        <ul class="navigation">
-            <li>
-                <a class="active" href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="bookshelf/bookshelf.html">Bookshelf</a>
-            </li>
-            <li>
-                <a href="./stats/statistics.html">Statistics</a>
-            </li>
-        </ul>
-    </nav> -->
+
+<!--------------------------------------------------------------------------
+    Book display Grid
+    ------------------------------------------------------------------------->
+
     <div class="container">
         <main class="book-display">
             <!--first element-->
@@ -82,7 +74,7 @@
                     Recently Read
                 </h2>
                 <div class="img-stack">
-                    <img src="./images/img_small/elena_ferrante.jpg"  />
+                    <img src="./images/img_small/elena_ferrante.jpg" />
                     <img src="./images/img_small/jia_tolentino.jpg" width="100" />
                     <img src="./images/img_small/lenin.jpeg" width="100" />
                     <img src="./images/img_small/david_madden.jpg" width="100" />
@@ -92,8 +84,13 @@
         </main>
     </div>
 </body>
- <!--footer-->
-        <footer>
-            Eda Saner 2023
-        </footer>
+
+<!--------------------------------------------------------------------------
+    Footer
+    ------------------------------------------------------------------------>
+
+<footer>
+    Eda Saner 2023
+</footer>
+
 </html>
