@@ -18,13 +18,15 @@
 
     <!--------------------------------------------------------------------------
     Logo and Navigation
+
+    aria-label="main menu"
     ------------------------------------------------------------------------>
 
     <header>
-        <img id="logo" src="../images/logo.svg">
-        <nav aria-label="main menu">
+        <img id="logo" src="../images/logo.svg" alt="">
+        <nav>
             <div class="menu-wrap">
-                <input aria-expanded="false" type="checkbox" id="toggle">
+                <input aria-label="hamburger menu" type="checkbox" id="toggle">
                 <div class="hamburger">
                     <div></div>
                 </div>
@@ -51,7 +53,7 @@
     Book display Grid
     ------------------------------------------------------------------------->
 
-    <main role="grid" class="book-display">
+    <main role="grid" aria-label="bookshelf" class="book-display">
         <!--first element-->
         <article role="gridcell" class="content grid-span-2">
             <h2>
@@ -73,12 +75,26 @@
             </h2>
             <div class="img-stack">
                 <img src="./images/img_small/elena_ferrante.jpg" />
-                <img src="./images/img_small/jia_tolentino.jpg" width="100" />
-                <img src="./images/img_small/lenin.jpeg" width="100" />
-                <img src="./images/img_small/david_madden.jpg" width="100" />
+                <img src="./images/img_small/jia_tolentino.jpg" />
+                <img src="./images/img_small/lenin.jpeg" />
+                <img src="./images/img_small/david_madden.jpg" />
             </div>
         </article>
     </main>
+
+    <!-- <div>
+        <h3>
+            <button id="accordion-header-1" aria-controls="accordion-panel-1" aria-expanded="true">
+                Item 1
+            </button>
+        </h3>
+
+        <section id="accordion-panel-1" aria-labelledby="accordion-header-1">
+            <p>
+                sjnfkajsndfkja
+            </p>
+        </section>
+    </div> -->
 </body>
 
 <!--------------------------------------------------------------------------

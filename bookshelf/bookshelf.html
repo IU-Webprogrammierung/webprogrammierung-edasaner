@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    <script src="../script.js"></script>
     <!--------------------------------------------------------------------------
     Logo and Navigation
     ------------------------------------------------------------------------>
@@ -54,320 +54,26 @@
     ------------------------------------------------------------------------->
 
     <h1>Bookshelf</h1>
+    <div class="filter">
+        <button class="filter-option" data-filter="filter-nonfiction"
+            onclick="filterbookshelf(event)">nonfiction</button>
+        <button class="filter-option" data-filter="filter-toberead" onclick="filterbookshelf(event)">to be read</button>
+        <button class="filter-option" data-filter="filter-fiction" onclick="filterbookshelf(event)">fiction</button>
+        <button class="filter-option" data-filter="*" onclick="filterbookshelf(event)">all</button>
+    </div>
     <!-- <section class="main container"> -->
-        <main class="bookshelf">
-            <!-- Ferrante -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        My Brilliant Friend
-                    </h2>
-                    <h3>
-                        Elena Ferrante
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/elena_ferrante.jpg" />
-                        <div class="tag-stack">
-                            <button class="tags nonfiction" type="button">
-                                <p>nonfiction</p>
-                            </button>
-                            <button class="tags toberead" type="button">
-                                <p>to be read</p>
-                            </button>
-                        </div>
-                    </div>
-                    <a id="book-link" href="../book/book.html">
-                        <div class="hover-wrapper__content fade">
-                            <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                            <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                            <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                            <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                            <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        </div>
-                    </a>
-                </article>
-            </div>
-
-            <!-- Ravn -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        The Employees: A workplace novel of the 22nd century
-                    </h2>
-                    <h3>
-                        Olga Ravn
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/olga_ravn.jpg" />
-                        <div class="tag-stack">
-                            <button class="tags nonfiction" type="button">
-                                <p>nonfiction</p>
-                            </button>
-                            <button class="tags toberead" type="button">
-                                <p>to be read</p>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Tartt -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        The Secret History
-                    </h2>
-                    <h3>
-                        Donna Tartt
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/donna-tartt.jpg" />
-                        <button class="tags nonfiction" type="button">
-                            <p>nonfiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-            </div>
-
-            <!-- Winterson -->
-            <div class="hover-wrapper">
-                </article>
-                <article class="bookshelf__item">
-                    <h2>
-                        12 Bytes
-                    </h2>
-                    <h3>
-                        Jeanette Winterson
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/jeanette_winterson.jpg" />
-                        <button class="tags nonfiction" type="button">
-                            <p>nonfiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Frazier -->
+    <main class="bookshelf">
+        <!-- Ferrante -->
+        <div class="hover-wrapper filter-fiction">
             <article class="bookshelf__item">
                 <h2>
-                    Pizza Girl
+                    My Brilliant Friend
                 </h2>
                 <h3>
-                    Jean Kyong Frazier
+                    Elena Ferrante
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/jean_kyong.jpg" />
-                    <div class="tag-stack">
-                        <button class="tags fiction" type="button">
-                            <p>fiction</p>
-                        </button>
-                        <button class="tags toberead" type="button">
-                            <p>to be read</p>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Madden, Marcuse -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        In Defense of Housing
-                    </h2>
-                    <h3>
-                        David Madden, Peter Marcuse
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/david_madden.jpg" />
-                        <button class="tags nonfiction" type="button">
-                            <p>nonfiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Davis -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        Women, Race and Class
-                    </h2>
-                    <h3>
-                        Angela Davis
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/angela_davis.jpg" />
-                        <button class="tags nonfiction" type="button">
-                            <p>nonfiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Pater -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        The Politics of Design
-                    </h2>
-                    <h3>
-                        Ruben Pater
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/ruben_pater.jpeg" />
-                        <button class="tags nonfiction" type="button">
-                            <p>nonfiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Tolentino -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        Trick Mirror: Reflectionson self delusions
-                    </h2>
-                    <h3>
-                        Jia Tolentino
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/jia_tolentino.jpg" />
-                        <button class="tags nonfiction" type="button">
-                            <p>nonfiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Kuang, Fabricant -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        User Friendly: How the hidden rules of Design are changing the way we live, work and play
-                    </h2>
-                    <h3>
-                        Cliff Kuang with Robert Fabricant
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/ruben_pater.jpeg" />
-                        <button class="tags nonfiction" type="button">
-                            <p>nonfiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Shannon -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        The Priory of the Orange Tree
-                    </h2>
-                    <h3>
-                        Samantha Shannon
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/samantha_shannon.jpg" height="240px" />
-                        <button class="tags fiction" type="button">
-                            <p>fiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Reid -->
-            <div class="hover-wrapper">
-                <article class="bookshelf__item">
-                    <h2>
-                        The Seven Husbands of Evelyn Hugo
-                    </h2>
-                    <h3>
-                        Taylor Jenkings Reid
-                    </h3>
-                    <div class="bookshelf__media">
-                        <img src="../images/img_medium/taylor_jenkings_reid.jpg" height="240px" />
-                        <button class="tags fiction" type="button">
-                            <p>fiction</p>
-                        </button>
-                    </div>
-                    <div class="hover-wrapper__content fade">
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Kocienda -->
-            <article class="bookshelf__item">
-                <h2>
-                    Creatice Selection
-                </h2>
-                <h3>
-                    Ken Kocienda
-                </h3>
-                <div class="bookshelf__media">
-                    <img src="../images/img_medium/ken_kocienda.jpeg" height="240px" />
+                    <img src="../images/img_medium/elena_ferrante.jpg" />
                     <div class="tag-stack">
                         <button class="tags nonfiction" type="button">
                             <p>nonfiction</p>
@@ -377,39 +83,29 @@
                         </button>
                     </div>
                 </div>
-            </article>
-
-            <!-- Woolf -->
-            <article class="bookshelf__item">
-                <h2>
-                    Mrs. Dolloway
-                </h2>
-                <h3>
-                    Virginia Woolf
-                </h3>
-                <div class="bookshelf__media">
-                    <img src="../images/img_medium/virginia_woolf.jpg" height="240px" />
-                    <div class="tag-stack">
-                        <button class="tags fiction" type="button">
-                            <p>fiction</p>
-                        </button>
-                        <button class="tags toberead" type="button">
-                            <p>to be read</p>
-                        </button>
+                <a id="book-link" href="../book/book.html">
+                    <div class="hover-wrapper__content fade">
+                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                        <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     </div>
-                </div>
+                </a>
             </article>
+        </div>
 
-            <!-- Tarnoff -->
-            <article class="bookshelf__item">
+        <!-- Ravn -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item filter-nonfiction">
                 <h2>
-                    Internet for the People
+                    The Employees: A workplace novel of the 22nd century
                 </h2>
                 <h3>
-                    Ben Tarnoff
+                    Olga Ravn
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/ben_tarnoff.webp" height="240px" />
+                    <img src="../images/img_medium/olga_ravn.jpg" />
                     <div class="tag-stack">
                         <button class="tags nonfiction" type="button">
                             <p>nonfiction</p>
@@ -419,12 +115,324 @@
                         </button>
                     </div>
                 </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
             </article>
+        </div>
 
-            <!-- White Space -->
-            <article class="placeholder">
+        <!-- Tartt -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item filter-fiction">
+                <h2>
+                    The Secret History
+                </h2>
+                <h3>
+                    Donna Tartt
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/donna-tartt.jpg" />
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+        </div>
+
+        <!-- Winterson -->
+        <div class="hover-wrapper">
             </article>
-        </main>
+            <article class="bookshelf__item">
+                <h2>
+                    12 Bytes
+                </h2>
+                <h3>
+                    Jeanette Winterson
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/jeanette_winterson.jpg" />
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Frazier -->
+        <article class="bookshelf__item">
+            <h2>
+                Pizza Girl
+            </h2>
+            <h3>
+                Jean Kyong Frazier
+            </h3>
+            <div class="bookshelf__media">
+                <img src="../images/img_medium/jean_kyong.jpg" />
+                <div class="tag-stack">
+                    <button class="tags fiction" type="button">
+                        <p>fiction</p>
+                    </button>
+                    <button class="tags toberead" type="button">
+                        <p>to be read</p>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Madden, Marcuse -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item">
+                <h2>
+                    In Defense of Housing
+                </h2>
+                <h3>
+                    David Madden, Peter Marcuse
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/david_madden.jpg" />
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Davis -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item">
+                <h2>
+                    Women, Race and Class
+                </h2>
+                <h3>
+                    Angela Davis
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/angela_davis.jpg" />
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pater -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item">
+                <h2>
+                    The Politics of Design
+                </h2>
+                <h3>
+                    Ruben Pater
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/ruben_pater.jpeg" />
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Tolentino -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item">
+                <h2>
+                    Trick Mirror: Reflectionson self delusions
+                </h2>
+                <h3>
+                    Jia Tolentino
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/jia_tolentino.jpg" />
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Kuang, Fabricant -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item">
+                <h2>
+                    User Friendly: How the hidden rules of Design are changing the way we live, work and play
+                </h2>
+                <h3>
+                    Cliff Kuang with Robert Fabricant
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/ruben_pater.jpeg" />
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Shannon -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item">
+                <h2>
+                    The Priory of the Orange Tree
+                </h2>
+                <h3>
+                    Samantha Shannon
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/samantha_shannon.jpg" height="240px" />
+                    <button class="tags fiction" type="button">
+                        <p>fiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Reid -->
+        <div class="hover-wrapper">
+            <article class="bookshelf__item">
+                <h2>
+                    The Seven Husbands of Evelyn Hugo
+                </h2>
+                <h3>
+                    Taylor Jenkings Reid
+                </h3>
+                <div class="bookshelf__media">
+                    <img src="../images/img_medium/taylor_jenkings_reid.jpg" height="240px" />
+                    <button class="tags fiction" type="button">
+                        <p>fiction</p>
+                    </button>
+                </div>
+                <div class="hover-wrapper__content fade">
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                    <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
+                </div>
+            </article>
+        </div>
+
+        <!-- Kocienda -->
+        <article class="bookshelf__item">
+            <h2>
+                Creatice Selection
+            </h2>
+            <h3>
+                Ken Kocienda
+            </h3>
+            <div class="bookshelf__media">
+                <img src="../images/img_medium/ken_kocienda.jpeg" height="240px" />
+                <div class="tag-stack">
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                    <button class="tags toberead" type="button">
+                        <p>to be read</p>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Woolf -->
+        <article class="bookshelf__item">
+            <h2>
+                Mrs. Dolloway
+            </h2>
+            <h3>
+                Virginia Woolf
+            </h3>
+            <div class="bookshelf__media">
+                <img src="../images/img_medium/virginia_woolf.jpg" height="240px" />
+                <div class="tag-stack">
+                    <button class="tags fiction" type="button">
+                        <p>fiction</p>
+                    </button>
+                    <button class="tags toberead" type="button">
+                        <p>to be read</p>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- Tarnoff -->
+        <article class="bookshelf__item">
+            <h2>
+                Internet for the People
+            </h2>
+            <h3>
+                Ben Tarnoff
+            </h3>
+            <div class="bookshelf__media">
+                <img src="../images/ben_tarnoff.webp" height="240px" />
+                <div class="tag-stack">
+                    <button class="tags nonfiction" type="button">
+                        <p>nonfiction</p>
+                    </button>
+                    <button class="tags toberead" type="button">
+                        <p>to be read</p>
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- White Space -->
+        <article class="placeholder">
+        </article>
+    </main>
+
 </body>
 
 <!--------------------------------------------------------------------------
