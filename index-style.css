@@ -117,7 +117,7 @@ nav input[type="checkbox"] {
     background-color: var(--grid-bg-color);
 }
 
-.grid-span-2 {
+.book-display__grid-span-2 {
     grid-row: span 2;
     background-color: var(--main-bg-color);
 }
@@ -125,12 +125,12 @@ nav input[type="checkbox"] {
 /* Grid Content
    ========================================================================== */
 
-.content {
+.book-display__content {
     padding: 1.5rem;
     background-color: var(--main-bg-color);
 }
 
-.img-stack {
+.book-display__img-stack {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
