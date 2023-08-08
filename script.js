@@ -9,19 +9,19 @@
 // };
 
 function filterbookshelf(e) {
-    const selection = document.querySelectorAll(".bookshelf__item");
+    const selection = document.querySelectorAll(".hover-wrapper");
     let filter = e.target.dataset.filter;
 
     selection.forEach(item => {
         if (filter === '*' || item.classList.contains(filter)) {
             item.style.display = 'flex';
-            
+
         } else {
             item.style.display = 'none';
+            // document.getElementsByClassName("placeholder").style.display = flex;
         }
     });
 }
-
 
 // if (filter === "*") {
 //     bookshelf.forEach(bookshelf => bookshelf.classList.remove("hidden"));
