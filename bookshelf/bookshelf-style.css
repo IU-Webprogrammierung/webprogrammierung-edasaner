@@ -78,9 +78,9 @@ h3 {
   letter-spacing: 0.02em;
 }
 
-.hidden {
+/* .hidden {
   display: none;
-}
+} */
 
 /* ==========================================================================
    Navigation
@@ -117,6 +117,36 @@ nav input[type="checkbox"] {
 .navigation a.active {
   text-decoration: underline;
 }
+
+/* ==========================================================================
+   Filter
+   ========================================================================== */
+.filter {
+  display: flex;
+  gap: 12px;
+
+  margin: 0px 0px 24px 32px;
+}
+
+.filter-option {
+  border-style: solid;
+  border-color: #321be0;
+  border-width: 0.5px;
+  background-color: #1c3c7c;
+  color: #FFFFFF;
+  padding: 8px 8px;
+  border-radius: 5px;
+}
+
+.filter-option:active {
+  transform: scale(0.96);
+}
+
+.filter-option:focus {
+  background-color: #BBDAFF;
+  color: #1c3c7c;
+}
+
 
 /* ==========================================================================
    Grid Layout
@@ -264,10 +294,21 @@ nav input[type="checkbox"] {
 }
 
 @keyframes shake {
-  10% { transform: scale(1.05) rotate(5deg);}
-  20% { transform: scale(1.05) rotate(-5deg);}
-  30% { transform: scale(1.05) rotate(5deg);}
-  40% { transform: none;}
+  10% {
+    transform: scale(1.05) rotate(5deg);
+  }
+
+  20% {
+    transform: scale(1.05) rotate(-5deg);
+  }
+
+  30% {
+    transform: scale(1.05) rotate(5deg);
+  }
+
+  40% {
+    transform: none;
+  }
 }
 
 
@@ -314,7 +355,7 @@ footer {
     opacity: 0%;
   }
 
-   /* Responsive hamburger menu
+  /* Responsive hamburger menu
    ========================================================================== */
 
   nav input[type="checkbox"] {
