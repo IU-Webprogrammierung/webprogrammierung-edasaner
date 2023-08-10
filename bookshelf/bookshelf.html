@@ -25,7 +25,7 @@
         <img id="logo" src="../images/logo.svg">
         <nav>
             <div class="menu-wrap">
-                <input type="checkbox" id="toggle">
+                <input aria-label="hamburger menu" type="checkbox" id="toggle">
                 <div class="hamburger">
                     <div></div>
                 </div>
@@ -36,7 +36,7 @@
                                 <a href="../index.html">Home</a>
                             </li>
                             <li>
-                                <a class="active" href="bookshelf.html">Bookshelf</a>
+                                <a aria-current="page" class="active" href="bookshelf.html">Bookshelf</a>
                             </li>
                             <li>
                                 <a href="../stats/statistics.html">Statistics</a>
@@ -54,16 +54,16 @@
 
     <h1>Bookshelf</h1>
     <div class="filter">
-        <button class="filter-option" data-filter="filter-nonfiction"
+        <button aria-label="filter nonfiction" class="filter-option" data-filter="filter-nonfiction"
             onclick="filterbookshelf(event)">nonfiction</button>
-        <button class="filter-option" data-filter="filter-fiction" onclick="filterbookshelf(event)">fiction</button>
-        <button class="filter-option" data-filter="filter-toberead" onclick="filterbookshelf(event)">to be read</button>
-        <button class="filter-option" data-filter="*" onclick="filterbookshelf(event)">all</button>
+        <button aria-label="filter fiction" class="filter-option" data-filter="filter-fiction" onclick="filterbookshelf(event)">fiction</button>
+        <button aria-label="filter to be read" class="filter-option" data-filter="filter-toberead" onclick="filterbookshelf(event)">to be read</button>
+        <button aria-label="filter all" class="filter-option" data-filter="*" onclick="filterbookshelf(event)">all</button>
     </div>
     <!-- <section class="main container"> -->
-    <main class="bookshelf">
+    <main role="grid" aria-label="bookshelf" class="bookshelf">
         <!-- Ferrante -->
-        <div class="hover-wrapper filter-fiction">
+        <div role="gridcell" class="hover-wrapper filter-fiction">
             <article class="bookshelf__item">
                 <h2>
                     My Brilliant Friend
@@ -72,7 +72,7 @@
                     Elena Ferrante
                 </h3>
                 <div class="bookshelf__media">
-                    <img id="clickable" src="../images/img_medium/elena_ferrante.jpg" />
+                    <img id="clickable" src="../images/img_medium/elena_ferrante.jpg" alt="My Brilliant Friend" />
                     <div class="tag-stack">
                         <button class="tags fiction" type="button">
                             <p>fiction</p>
@@ -82,8 +82,8 @@
                         </button>
                     </div>
                 </div>
-                <a id="book-link" href="../book/book.html">
-                    <div class="hover-wrapper__content fade">
+                <a id="book-link" href="../book/book.html" aria-label="link to book detail page">
+                    <div class="hover-wrapper__content fade" aria-label="rating: 5">
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                         <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -95,7 +95,7 @@
         </div>
 
         <!-- Ravn -->
-        <div class="hover-wrapper filter-fiction">
+        <div role="gridcell" class="hover-wrapper filter-fiction">
             <article class="bookshelf__item">
                 <h2>
                     The Employees: A workplace novel of the 22nd century
@@ -104,7 +104,7 @@
                     Olga Ravn
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/olga_ravn.jpg" />
+                    <img src="../images/img_medium/olga_ravn.jpg" alt="The Employees"/>
                     <div class="tag-stack">
                         <button class="tags fiction" type="button">
                             <p>fiction</p>
@@ -114,7 +114,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 5">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -125,7 +125,7 @@
         </div>
 
         <!-- Tartt -->
-        <div class="hover-wrapper filter-fiction">
+        <div role="gridcell" class="hover-wrapper filter-fiction">
             <article class="bookshelf__item">
                 <h2>
                     The Secret History
@@ -134,12 +134,12 @@
                     Donna Tartt
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/donna-tartt.jpg" />
+                    <img src="../images/img_medium/donna-tartt.jpg" alt="The Secret History"/>
                     <button class="tags fiction" type="button">
                         <p>fiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 4">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -148,7 +148,7 @@
         </div>
 
         <!-- Winterson -->
-        <div class="hover-wrapper filter-nonfiction">
+        <div role="gridcell" class="hover-wrapper filter-nonfiction">
             </article>
             <article class="bookshelf__item">
                 <h2>
@@ -158,12 +158,12 @@
                     Jeanette Winterson
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/jeanette_winterson.jpg" />
+                    <img src="../images/img_medium/jeanette_winterson.jpg" alt="12 Bytes"/>
                     <button class="tags nonfiction" type="button">
                         <p>nonfiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 5">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -174,7 +174,7 @@
         </div>
 
         <!-- Frazier -->
-        <div class="hover-wrapper filter-fiction">
+        <div role="gridcell" class="hover-wrapper filter-fiction">
             <article class="bookshelf__item">
                 <h2>
                     Pizza Girl
@@ -183,7 +183,7 @@
                     Jean Kyong Frazier
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/jean_kyong.jpg" />
+                    <img src="../images/img_medium/jean_kyong.jpg" alt="Pizza Girl" />
                     <div class="tag-stack">
                         <button class="tags fiction" type="button">
                             <p>fiction</p>
@@ -198,7 +198,7 @@
 
 
         <!-- Madden, Marcuse -->
-        <div class="hover-wrapper filter-nonfiction">
+        <div role="gridcell" class="hover-wrapper filter-nonfiction">
             <article class="bookshelf__item">
                 <h2>
                     In Defense of Housing
@@ -207,12 +207,12 @@
                     David Madden, Peter Marcuse
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/david_madden.jpg" />
+                    <img src="../images/img_medium/david_madden.jpg" alt="In Defense of Housing"/>
                     <button class="tags nonfiction" type="button">
                         <p>nonfiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 5">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -223,7 +223,7 @@
         </div>
 
         <!-- Davis -->
-        <div class="hover-wrapper filter-nonfiction">
+        <div role="gridcell" class="hover-wrapper filter-nonfiction">
             <article class="bookshelf__item">
                 <h2>
                     Women, Race and Class
@@ -232,12 +232,12 @@
                     Angela Davis
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/angela_davis.jpg" />
+                    <img src="../images/img_medium/angela_davis.jpg" alt="Women, Race and Class"/>
                     <button class="tags nonfiction" type="button">
                         <p>nonfiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 5">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -248,7 +248,7 @@
         </div>
 
         <!-- Pater -->
-        <div class="hover-wrapper filter-nonfiction">
+        <div role="gridcell" class="hover-wrapper filter-nonfiction">
             <article class="bookshelf__item">
                 <h2>
                     The Politics of Design
@@ -257,12 +257,12 @@
                     Ruben Pater
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/ruben_pater.jpeg" />
+                    <img src="../images/img_medium/ruben_pater.jpeg" alt="The Politics of Design" />
                     <button class="tags nonfiction" type="button">
                         <p>nonfiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 5">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -273,7 +273,7 @@
         </div>
 
         <!-- Tolentino -->
-        <div class="hover-wrapper filter-nonfiction">
+        <div role="gridcell" class="hover-wrapper filter-nonfiction">
             <article class="bookshelf__item">
                 <h2>
                     Trick Mirror: Reflections on self delusions
@@ -282,12 +282,12 @@
                     Jia Tolentino
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/jia_tolentino.jpg" />
+                    <img src="../images/img_medium/jia_tolentino.jpg" alt="Trick Mirror"/>
                     <button class="tags nonfiction" type="button">
                         <p>nonfiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 3">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -296,7 +296,7 @@
         </div>
 
         <!-- Kuang, Fabricant -->
-        <div class="hover-wrapper filter-nonfiction">
+        <div role="gridcell" class="hover-wrapper filter-nonfiction">
             <article class="bookshelf__item">
                 <h2>
                     User Friendly: How the hidden rules of Design are changing the way we live, work and play
@@ -305,12 +305,12 @@
                     Cliff Kuang with Robert Fabricant
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/ruben_pater.jpeg" />
+                    <img src="../images/img_medium/ruben_pater.jpeg" alt="User Friendly"/>
                     <button class="tags nonfiction" type="button">
                         <p>nonfiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 4">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -320,7 +320,7 @@
         </div>
 
         <!-- Shannon -->
-        <div class="hover-wrapper filter-fiction">
+        <div role="gridcell" class="hover-wrapper filter-fiction">
             <article class="bookshelf__item">
                 <h2>
                     The Priory of the Orange Tree
@@ -329,12 +329,12 @@
                     Samantha Shannon
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/samantha_shannon.jpg" />
+                    <img src="../images/img_medium/samantha_shannon.jpg" alt="The Priory of the Orange Tree"/>
                     <button class="tags fiction" type="button">
                         <p>fiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 5">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -345,7 +345,7 @@
         </div>
 
         <!-- Reid -->
-        <div class="hover-wrapper filter-fiction">
+        <div role="gridcell" class="hover-wrapper filter-fiction">
             <article class="bookshelf__item">
                 <h2>
                     The Seven Husbands of Evelyn Hugo
@@ -354,12 +354,12 @@
                     Taylor Jenkings Reid
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/taylor_jenkings_reid.jpg" />
+                    <img src="../images/img_medium/taylor_jenkings_reid.jpg" alt="The Seven Husbands of Evelyn Hugo"/>
                     <button class="tags fiction" type="button">
                         <p>fiction</p>
                     </button>
                 </div>
-                <div class="hover-wrapper__content fade">
+                <div class="hover-wrapper__content fade" aria-label="rating: 3">
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
                     <i class="fa-solid fa-star fa-2xl" style="color: #f7cd24;"></i>
@@ -368,16 +368,16 @@
         </div>
 
         <!-- Kocienda -->
-        <div class="hover-wrapper filter-toberead filter-nonfiction">
+        <div role="gridcell" class="hover-wrapper filter-toberead filter-nonfiction">
             <article class="bookshelf__item">
                 <h2>
-                    Creatice Selection
+                    Creative Selection
                 </h2>
                 <h3>
                     Ken Kocienda
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/ken_kocienda.jpeg" />
+                    <img src="../images/img_medium/ken_kocienda.jpeg" alt="Creative Selection"/>
                     <div class="tag-stack">
                         <button class="tags nonfiction" type="button">
                             <p>nonfiction</p>
@@ -392,7 +392,7 @@
 
 
         <!-- Woolf -->
-        <div class="hover-wrapper filter-toberead filter-fiction">
+        <div role="gridcell" class="hover-wrapper filter-toberead filter-fiction">
             <article class="bookshelf__item">
                 <h2>
                     Mrs. Dolloway
@@ -401,7 +401,7 @@
                     Virginia Woolf
                 </h3>
                 <div class="bookshelf__media">
-                    <img src="../images/img_medium/virginia_woolf.jpg" />
+                    <img src="../images/img_medium/virginia_woolf.jpg" alt="Mrs. Dolloway"/>
                     <div class="tag-stack">
                         <button class="tags fiction" type="button">
                             <p>fiction</p>
@@ -416,7 +416,7 @@
 
 
         <!-- Tarnoff -->
-        <div class="hover-wrapper filter-toberead filter-nonfiction">
+        <div role="gridcell" class="hover-wrapper filter-toberead filter-nonfiction">
             <article class="bookshelf__item">
                 <h2>
                     Internet for the People
