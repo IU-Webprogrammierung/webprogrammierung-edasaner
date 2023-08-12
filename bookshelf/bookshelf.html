@@ -49,7 +49,7 @@
     </header>
 
     <!--------------------------------------------------------------------------
-    Bookshelf Grid
+    Filter
     ------------------------------------------------------------------------->
 
     <h1>Bookshelf</h1>
@@ -60,7 +60,11 @@
         <button aria-label="filter to be read" class="filter-option" data-filter="filter-toberead" onclick="filterbookshelf(event)">to be read</button>
         <button aria-label="filter all" class="filter-option" data-filter="*" onclick="filterbookshelf(event)">all</button>
     </div>
-    <!-- <section class="main container"> -->
+
+ <!--------------------------------------------------------------------------
+    Bookshelf Grid
+    ------------------------------------------------------------------------->
+
     <main role="grid" aria-label="bookshelf" class="bookshelf">
         <!-- Ferrante -->
         <div role="gridcell" class="hover-wrapper filter-fiction">
@@ -425,6 +429,7 @@
                     Ben Tarnoff
                 </h3>
                 <div class="bookshelf__media">
+                    <!-- picture tag -->
                     <img src="../images/ben_tarnoff.webp" height="240px" />
                     <div class="tag-stack">
                         <button class="tags nonfiction" type="button">
