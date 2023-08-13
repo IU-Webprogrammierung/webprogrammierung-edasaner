@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-----------------------------------------------------------------------------
+   Head
+   ---------------------------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="stats-style.css">
-    <title>Document</title>
+    <title>edabooks.</title>
 </head>
 
 <body>
-    <!--navigation bar-->
-    <nav>
-        <input type="checkbox" id="hamburger-menu">
-        <label for="hamburger-menu" class="hamburger-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </label>
-        <ul class="navigation">
-            <li>
-                <a href="../index.html">Home</a>
-            </li>
-            <li>
-                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
-            </li>
-            <li>
-                <a class="active" href="statistics.html">Statistics</a>
-            </li>
-        </ul>
-    </nav>
+
+    <!--------------------------------------------------------------------------
+    Logo and Navigation
+    ------------------------------------------------------------------------>
+
+    <header>
+        <img id="logo" src="../images/logo.svg">
+        <nav>
+            <div class="menu-wrap">
+                <input aria-label="hamburger menu" type="checkbox" id="toggle">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <ul class="navigation">
+                            <li>
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
+                            </li>
+                            <li>
+                                <a aria-current="page" class="active" href="statistics.html">Statistics</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--------------------------------------------------------------------------
+    Stats Grid
+    ------------------------------------------------------------------------->
 
     <h1>
         Stats
     </h1>
     <main class="stats">
+
+        <!-- Stats Content -->
         <article class="stats__content">
             <h2>
                 20 Books
@@ -59,6 +82,8 @@
             <h2>
                 Genre Breakdown
             </h2>
+
+            <!-- Tags -->
             <div class="tag-stack">
                 <button class="tags nonfiction" type="button">
                     <p class="tag-stack__text">non fiction</p>
@@ -73,27 +98,30 @@
                 </button>
             </div>
         </article>
+
+        <!-- Favorites -->
         <article class="stats__content favorites">
             <h2>
                 2023 Favorites
             </h2>
             <div class="img-stack">
-                <img src="../images/img_medium/jeanette_winterson.jpg" />
-                <img src="../images/img_medium/lenin.jpeg" />
-                <img src="../images/img_medium/samantha_shannon.jpg" />
-                <img src="../images/img_medium/ruben_pater.jpeg" />
+                <img src="../images/img_medium/jeanette_winterson.jpg" alt="12 Bytes"/>
+                <img src="../images/img_medium/lenin.jpeg" alt="Staat und Revolution"/>
+                <img src="../images/img_medium/samantha_shannon.jpg" alt="The Priory of the Orange Tree"/>
+                <img src="../images/img_medium/ruben_pater.jpeg" alt="The politics of Design"/>
             </div>
         </article>
         <article class="placeholder">
         </article>
     </main>
-
-
-    
-
 </body>
-<!--footer-->
-    <footer>
-        Eda Saner 2023
-    </footer>
+
+<!--------------------------------------------------------------------------
+    Footer
+    ------------------------------------------------------------------------>
+    
+<footer>
+    Eda Saner 2023
+</footer>
+
 </html>

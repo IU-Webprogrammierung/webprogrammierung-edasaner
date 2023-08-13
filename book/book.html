@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-----------------------------------------------------------------------------
+   Head
+   ---------------------------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="book-style.css">
-    <title>Document</title>
+    <title>edabooks.</title>
 </head>
 
 <body>
-    <!--navigation bar-->
-    <nav>
-        <input type="checkbox" id="hamburger-menu">
-        <label for="hamburger-menu" class="hamburger-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </label>
-        <ul class="navigation">
-            <li>
-                <a href="../index.html">Home</a>
-            </li>
-            <li>
-                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
-            </li>
-            <li>
-                <a href="../stats/statistics.html">Statistics</a>
-            </li>
-        </ul>
-    </nav>
 
-    <!--book detail-->
+    <!--------------------------------------------------------------------------
+    Logo and Navigation
+    ------------------------------------------------------------------------>
+
+    <header>
+        <img id="logo" src="../images/logo.svg">
+        <nav>
+            <div class="menu-wrap">
+                <input aria-label="hamburger menu" type="checkbox" id="toggle">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <ul class="navigation">
+                            <li>
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
+                            </li>
+                            <li>
+                                <a href="../stats/statistics.html">Statistics</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--------------------------------------------------------------------------
+    Book detail
+    ------------------------------------------------------------------------->
+
     <a id="back" href="../bookshelf/bookshelf.html">back</a>
     <main>
         <article class="book-detail">
@@ -59,7 +78,6 @@
                         country
                         undergoing momentous change.
                     </p>
-                    <!-- <h3>Review:</h3> -->
                     <p class="text book-detail__review">
                         Lörem ipsum anade ådat detelig, tinera. Diheten berar: poss. Seskade larosamma hemibelt soliga.
                         Irade
@@ -73,55 +91,41 @@
 
                     </p>
                 </div>
-
             </div>
-            <img src="../images/img_large/elena_ferrante.jpg" />
+            <img src="../images/img_large/elena_ferrante.jpg" alt="My Brilliant Friend"/>
         </article>
 
-
-        <!--more books-->
+    <!--------------------------------------------------------------------------
+    Recommendations
+    ------------------------------------------------------------------------->
         <div class="recommendations">
             <article class="recommendations__item">
-                <img src="/images/samantha_shannon.jpg" height="250px" />
+                <img src="/images/img_medium/samantha_shannon.jpg" alt="The Priory of the Orange Tree" />
                 <button class="tags fiction" type="button">
                     <p class="tag-stack__text">fiction</p>
                 </button>
 
             </article>
             <article class="recommendations__item">
-                <img src="/images/taylor_jenkings_reid.jpg" height="250px" />
+                    <img src="/images/img_medium/taylor_jenkings_reid.jpg"/>
                 <button class="tags fiction" type="button">
                     <p class="tag-stack__text">fiction</p>
                 </button>
             </article>
             <article class="recommendations__item">
-                <img src="/images/virginia_woolf.jpg" height="250px" />
+                <img src="/images/img_medium/virginia_woolf.jpg" alt="Mrs. Dolloway"/>
                 <button class="tags fiction" type="button">
                     <p class="tag-stack__text">fiction</p>
                 </button>
             </article>
-
         </div>
     </main>
-
-
-    <!-- 
-    <img src="/images/samantha_shannon.jpg" height="240px" />
-    <img src="/images/taylor_jenkings_reid.jpg" height="240px" />
-    <img src="/images/virginia_woolf.jpg" height="240px" />
-    <button class="tags fiction" type="button">
-        <p>Tag name</p>
-    </button>
-    <button class="tags fiction" type="button">
-        <p>Tag name</p>
-    </button><button class="tags fiction" type="button">
-        <p>Tag name</p>
-    </button>-->
-
-
-
 </body>
-<!--footer-->
+
+<!--------------------------------------------------------------------------
+    Footer
+    ------------------------------------------------------------------------->
+    
 <footer>
     Eda Saner 2023
 </footer>

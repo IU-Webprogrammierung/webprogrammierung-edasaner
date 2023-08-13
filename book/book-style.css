@@ -1,9 +1,13 @@
-/* define variables */
+/* ==========================================================================
+   CSS variables 
+   ========================================================================== */
+
 :root {
     /* general color variables */
     --main-bg-color: #FFFFFF;
     --grid-bg-color: #000000;
     --main-txt-color: #000000;
+
     /* tag color variables */
     --fiction-tag-color: #ECB8FF;
     --nonfiction-tag-color: #BBDAFF;
@@ -16,23 +20,28 @@
     --ff-prim: 'Helvetica', 'Arial', sans-serif;
     --ff-sec: 'Times', Times, serif;
 
+    /* font weight variables */
     --fw-prim: 400;
     --fw-sec: 300;
 
-    --fs-prim-s: 1rem;
+    /*font size variables */
     /* 16 */
+    --fs-prim-s: 1rem;
+    /* 20 */
     --fs-prim-m: 1.25rem;
-    /* 20 */
-    --fs-prim-l: 1.5rem;
     /* 24 */
-    --fs-sec-m: 1.25rem;
+    --fs-prim-l: 1.5rem;
     /* 20 */
-    --fs-sec-l: 2rem;
+    --fs-sec-m: 1.25rem;
     /* 32 */
-    --fs-sec-xl: 4rem;
+    --fs-sec-l: 2rem;
     /* 64 */
+    --fs-sec-xl: 4rem;
 }
 
+/* ==========================================================================
+   General Styles and Header
+   ========================================================================== */
 
 body {
     font-family: var(--ff-prim);
@@ -40,42 +49,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-/*top navigation bar*/
-
-nav input[type="checkbox"] {
-    display: none;
-}
-
-.navigation {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1rem;
-    justify-content: flex-end;
-    flex-shrink: 1;
-
-    margin: 32px 32px 0px 32px;
-    padding: 0;
-    list-style: none;
-}
-
-.hamburger-menu {
-    width: 30px;
-    height: 23px;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.bar {
-    height: 4px;
-    width: 100%;
-    background: #000000;
-    border-radius: 100px;
 }
 
 a {
@@ -106,6 +79,14 @@ p {
     font-weight: var(--fw-prim);
 }
 
+main {
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 100vh;
+}
+
 #back {
     height: 32px;
     width: min-content;
@@ -116,50 +97,58 @@ p {
     font-size: var(--fs-prim-s);
 }
 
-.tags {
-    border-style: none;
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+header {
     display: flex;
-    flex-direction: row;
-    align-self: flex-start;
-    align-items: flex-start;
-    padding: 0px 12px;
-    gap: 10px;
-    border-radius: 100px;
+    justify-content: space-between;
+    align-content: baseline;
 }
 
-.tag-stack__text {
-    font-size: 0.875rem;
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+    flex-shrink: 1;
+
+    margin: 32px 32px 0px 32px;
+    padding: 0;
+    list-style: none;
 }
 
-.genre {
-    padding: 0px;
+/* Navigation States
+  ========================================================================== */
+
+nav input[type="checkbox"] {
+    visibility: hidden;
 }
 
-.fiction {
-    background: var(--fiction-tag-color);
+.navigation a:hover {
+    text-decoration: underline;
 }
 
-.nonfiction {
-    background: var(--nonfiction-tag-color);
-
+.navigation a.active {
+    text-decoration: underline;
 }
 
-.toberead {
-    background: var(--tbr-tag-color);
-
-}
+/* ==========================================================================
+   Book description
+   ========================================================================== */
 
 .book-detail__title-author {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: px;
 }
 
 .book-detail__top {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     gap: 24px;
 }
 
@@ -168,13 +157,11 @@ p {
     justify-content: space-between;
     gap: 32px;
     padding: 16px 32px;
-    /* padding: 0 25% 0 0; */
 }
 
 .text {
     display: flex;
     flex: 1;
-
 }
 
 .book-title__description-review {
@@ -196,16 +183,56 @@ p {
     order: -1
 }
 
-.recommendations {
-    margin: 0px;
+/* Tag styles
+   ========================================================================== */
+
+.tags {
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    align-items: flex-start;
+
+    padding: 0px 12px;
+    gap: 10px;
+    border-radius: 100px;
+}
+
+.tag-stack__text {
+    font-size: 0.875rem;
+}
+
+.genre {
     padding: 0px;
+}
+
+.fiction {
+    background: var(--fiction-tag-color);
+}
+
+.nonfiction {
+    background: var(--nonfiction-tag-color);
+}
+
+.toberead {
+    background: var(--tbr-tag-color);
+}
+
+/* ==========================================================================
+   Book recommendations
+   ========================================================================== */
+
+.recommendations {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
     border: solid;
     border-color: black;
     border-width: 1px 0px 0px 0px;
     grid-gap: 1px;
     background-color: black;
+    margin: 0px;
+    padding: 0px;
 }
 
 .recommendations__item {
@@ -220,14 +247,9 @@ p {
     align-self: start;
 }
 
-main {
-    display: inline-flex;
-    flex-flow: column;
-    justify-content: space-between;
-    position: relative;
-    min-height: 100vh;
-}
-
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 footer {
     border: solid;
@@ -236,7 +258,10 @@ footer {
     padding: 16px;
 }
 
-
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* Max-width 1536 px*/
 @media (max-width: 1536px) {
     .book-detail__bottom {
         gap: 32px;
@@ -244,6 +269,7 @@ footer {
     }
 }
 
+/* Max-width 1280 px*/
 @media (max-width: 1280px) {
     .book-detail {
         flex-direction: column;
@@ -264,6 +290,7 @@ footer {
     }
 }
 
+/* Max-width 1024 px*/
 @media (max-width: 1024px) {
     .book-detail {
         flex-direction: column;
@@ -285,27 +312,126 @@ footer {
     }
 }
 
+/* Max-width 768 px*/
 @media (max-width: 768px) {
-    .hamburger-menu {
+    nav input[type="checkbox"] {
+        visibility: visible;
+    }
+
+    .menu-wrap {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    #toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65px;
+        height: 65px;
+        padding: 1rem;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .menu-wrap .hamburger {
         display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        padding: 1rem;
+        background-color: var(--main-bg-color);
+        z-index: 1;
     }
 
-    .book-display {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+    .menu-wrap .hamburger>div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: var(--main-txt-color);
+        transition: all 0.2s ease;
     }
 
-    .navigation {
-        display: none;
-        margin: 0;
+    .menu-wrap .hamburger>div:before,
+    .menu-wrap .hamburger>div:after {
+        content: " ";
+        position: absolute;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--main-txt-color);
+    }
+
+    .menu-wrap .hamburger>div:after {
+        top: 10px;
+    }
+
+    #toggle:checked+.hamburger>div {
+        transform: rotate(135deg);
+    }
+
+    #toggle:checked+.hamburger>div::before,
+    #toggle:checked+.hamburger>div::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #toggle:checked~.menu {
+        visibility: visible;
+    }
+
+    #toggle:checked~#toggle {
+        z-index: 1;
+    }
+
+    #hamburger:checked~ul {
+        display: block;
+    }
+
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .menu-wrap .menu>div {
+        display: flex;
+        flex-direction: column;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+
+        background: var(--main-bg-color);
+        width: 100%;
+        height: 100vh;
+        overflow-y: hidden;
+        scrollbar-width: none;
     }
 
     nav ul {
         display: none;
-        position: absolute;
         top: 70px;
         margin: 0;
-        height: min-content;
         width: 100%;
         background-color: var(--main-bg-color)
     }
@@ -315,16 +441,11 @@ footer {
         padding: 16px;
         text-align: center;
         width: 100%;
-        border-bottom: 1px solid black;
     }
-
-    #hamburger-menu:checked~ul {
-        display: block;
-    }
-
 
     .book-detail {
         flex-direction: column;
+
         margin: 0;
     }
 
@@ -334,6 +455,7 @@ footer {
 
     .book-detail__bottom {
         flex-direction: column;
+
         gap: 32px;
         padding: 16px 0;
     }
@@ -343,9 +465,11 @@ footer {
     }
 }
 
+/* Max-width 640 px*/
 @media (max-width: 640px) {
     .book-detail {
         flex-direction: column;
+
         margin: 0;
     }
 
@@ -355,6 +479,7 @@ footer {
 
     .book-detail__bottom {
         flex-direction: column;
+
         gap: 32px;
         padding: 16px 0;
     }
@@ -364,6 +489,7 @@ footer {
     }
 }
 
+/* Max-width 475 px*/
 @media (max-width: 475px) {
     .book-detail {
         flex-direction: column;

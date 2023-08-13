@@ -1,70 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-----------------------------------------------------------------------------
+   Head
+   ---------------------------------------------------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eda's Seite</title>
+    <link rel="icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <title>edabooks.</title>
     <link rel="stylesheet" href="index-style.css">
 </head>
 
-
 <body>
-    <!--navigation bar-->
-    <nav>
-        <input type="checkbox" id="hamburger-menu">
-        <label for="hamburger-menu" class="hamburger-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </label>
-        <ul class="navigation">
-            <li>
-                <a class="active" href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="bookshelf/bookshelf.html">Bookshelf</a>
-            </li>
-            <li>
-                <a href="./stats/statistics.html">Statistics</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="container">
-        <main class="book-display">
-            <!--first element-->
-            <article class="content grid-span-2">
-                <h2>
-                    Currently Reading
-                </h2>
-                <img src="./images/img_large/olga_ravn.jpg" />
-            </article>
-            <!--second element-->
-            <article class="content display-simple">
-                <h2>
-                    Next Up
-                </h2>
-                <img src="./images/img_small/ken_kocienda.jpeg" />
-            </article>
-            <!--third element-->
-            <article class="content display-complex">
-                <h2>
-                    Recently Read
-                </h2>
-                <div class="img-stack">
-                    <img src="./images/img_small/elena_ferrante.jpg"  />
-                    <img src="./images/img_small/jia_tolentino.jpg" width="100" />
-                    <img src="./images/img_small/lenin.jpeg" width="100" />
-                    <img src="./images/img_small/david_madden.jpg" width="100" />
-                </div>
 
-            </article>
-        </main>
-    </div>
+    <!--------------------------------------------------------------------------
+    Logo and Navigation
+
+    aria-label="main menu"
+    ------------------------------------------------------------------------>
+
+    <header>
+        <img id="logo" src="../images/logo.svg" alt="edabooks"/>
+        <nav>
+            <div class="menu-wrap">
+                <input aria-label="hamburger menu" type="checkbox" id="toggle">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <ul class="navigation">
+                            <li>
+                                <a aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="../bookshelf/bookshelf.html">Bookshelf</a>
+                            </li>
+                            <li>
+                                <a href="../stats/statistics.html">Statistics</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--------------------------------------------------------------------------
+    Book display Grid
+    ------------------------------------------------------------------------->
+
+    <main role="grid" aria-label="bookshelf" class="book-display">
+        <!--first element-->
+        <article role="gridcell" class="book-display__content book-display__grid-span-2">
+            <h2>
+                Currently Reading
+            </h2>
+            <img src="./images/img_large/olga_ravn.jpg" alt="The Employees" />
+        </article>
+        <!--second element-->
+        <article role="gridcell" class="book-display__content book-display__display-simple">
+            <h2>
+                Next Up
+            </h2>
+            <picture>
+                <source srcset="./images/img_webp_small/ken_kocienda.webp" type="image/webp"/>
+                <img src="./images/img_small/ken_kocienda.jpeg" alt="Creative Selection" />
+            </picture>
+            
+        </article>
+        <!--third element-->
+        <article role="gridcell" class="book-display__content book-display__display-complex">
+            <h2>
+                Recently Read
+            </h2>
+            <div class="book-display__img-stack">
+                <img src="./images/img_small/elena_ferrante.jpg" alt="My Brilliant Friend"/>
+                <img src="./images/img_small/jia_tolentino.jpg" alt="Trick Mirror"/>
+                <img src="./images/img_small/lenin.jpeg" alt="Staat und Revolution"/>
+                <img src="./images/img_small/david_madden.jpg" alt="In Defense of Housing"/>
+            </div>
+        </article>
+    </main>
 </body>
- <!--footer-->
-        <footer>
-            Eda Saner 2023
-        </footer>
+
+<!--------------------------------------------------------------------------
+    Footer
+    ------------------------------------------------------------------------>
+
+<footer>
+    Eda Saner 2023
+</footer>
+
 </html>

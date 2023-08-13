@@ -1,9 +1,13 @@
-/* define variables */
+/* ==========================================================================
+   CSS variables 
+   ========================================================================== */
+
 :root {
-  /* general color variables */
+  /* document main color variables */
   --main-bg-color: #FFFFFF;
   --grid-bg-color: #000000;
   --main-txt-color: #000000;
+
   /* tag color variables */
   --fiction-tag-color: #ECB8FF;
   --nonfiction-tag-color: #BBDAFF;
@@ -16,28 +20,28 @@
   --ff-prim: 'Helvetica', 'Arial', sans-serif;
   --ff-sec: 'Times', Times, serif;
 
+  /* font weight variables */
   --fw-prim: 400;
   --fw-sec: 300;
 
-  --fs-prim-s: 1rem;
+  /* font size variables */
   /* 16 */
+  --fs-prim-s: 1rem;
+  /* 20 */
   --fs-prim-m: 1.25rem;
-  /* 20 */
-  --fs-prim-l: 1.5rem;
   /* 24 */
-  --fs-sec-m: 1.25rem;
+  --fs-prim-l: 1.5rem;
   /* 20 */
-  --fs-sec-l: 2rem;
+  --fs-sec-m: 1.25rem;
   /* 32 */
-  --fs-sec-xl: 4rem;
+  --fs-sec-l: 2rem;
   /* 64 */
+  --fs-sec-xl: 4rem;
 }
 
-/* google fonts: https://fonts.google.com/specimen/Cormorant?query=cor */
-@font-face {
-  font-family: "Cormorant";
-  src: url("../fonts/Cormorant/Cormorant-VariableFont_wght.ttf") format("tff");
-}
+/* ==========================================================================
+   General Styles and Header
+   ========================================================================== */
 
 body {
   font-family: var(--ff-prim);
@@ -45,6 +49,11 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+a {
+  color: var(--main-txt-color);
+  text-decoration: none;
 }
 
 h1 {
@@ -69,9 +78,18 @@ h3 {
   letter-spacing: 0.02em;
 }
 
-/*top navigation bar*/
-nav input[type="checkbox"] {
+/* .hidden {
   display: none;
+} */
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation {
@@ -85,22 +103,11 @@ nav input[type="checkbox"] {
   list-style: none;
 }
 
-.hamburger-menu {
-  width: 30px;
-  height: 23px;
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-}
+/* Navigation States
+  ========================================================================== */
 
-.bar {
-  height: 4px;
-  width: 100%;
-  background: #000000;
-  border-radius: 100px;
+nav input[type="checkbox"] {
+  visibility: hidden;
 }
 
 .navigation a:hover {
@@ -108,21 +115,50 @@ nav input[type="checkbox"] {
 }
 
 .navigation a.active {
- text-decoration: underline;
+  text-decoration: underline;
 }
 
-a {
-  color: var(--main-txt-color);
-  text-decoration: none;
+/* ==========================================================================
+   Filter
+   ========================================================================== */
+.filter {
+  display: flex;
+  gap: 12px;
+
+  margin: 0px 0px 24px 32px;
 }
+
+.filter-option {
+  border-style: solid;
+  border-color: #321be0;
+  border-width: 0.5px;
+  background-color: #1c3c7c;
+  color: #FFFFFF;
+  padding: 8px 8px;
+  border-radius: 5px;
+}
+
+.filter-option:active {
+  transform: scale(0.96);
+}
+
+.filter-option:focus {
+  background-color: #BBDAFF;
+  color: #1c3c7c;
+}
+
+
+/* ==========================================================================
+   Grid Layout
+   ========================================================================== */
 
 .bookshelf {
-  /* position: relative; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+
   max-width: 100%;
   margin: 0px;
   padding: 0px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   border: solid;
   border-color: var(--grid-bg-color);
   border-width: 1px 0px 0px 0px;
@@ -131,14 +167,19 @@ a {
   overflow: auto;
 }
 
-/*styling bookshelf items*/
+/* Grid Content
+   ========================================================================== */
+
 .bookshelf__item {
   display: flex;
   flex-flow: column;
+  flex-wrap: wrap;
+  flex: 1;
+
   padding: 2rem;
   background-color: var(--main-bg-color);
   overflow: auto;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 .bookshelf__item>img {
@@ -153,14 +194,6 @@ a {
   gap: 32px;
 }
 
-.tag-stack {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-  gap: 10px;
-}
-
 .bookshelf__item>h2 {
   margin: 1rem 1rem 0rem 0rem;
 }
@@ -173,25 +206,28 @@ a {
   order: -1;
 }
 
+/* Tag styles
+   ========================================================================== */
+
 .tags {
   border-style: none;
   display: flex;
   flex-direction: row;
   align-self: flex-start;
   align-items: flex-start;
+
   padding: 0px 12px;
   gap: 10px;
   border-radius: 100px;
 }
 
-/*.tags {
-    width: auto;
-    align-self: start;
-    padding: 0px 8px;
-    border-radius: 100px;
-    display: inline-block;
-    border-style: none;
-}*/
+.tag-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: 10px;
+}
 
 .fiction {
   background: var(--fiction-tag-color);
@@ -208,31 +244,28 @@ a {
 }
 
 .placeholder {
-  opacity: 0%;
+  opacity: 100%;
+  background-color: var(--main-bg-color);
 }
+
+/* Rating overlay
+   ========================================================================== */
 
 .hover-wrapper {
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 
 .hover-wrapper__content {
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 24px;
   position: absolute;
   background-color: white;
   inset: 0;
-  /* height: 50px; */
-  /* width: 100%;
-  height: 100%; */
-  /* position: absolute;
-  inset: 0;
-  font-size: var(--fs-sec-m);
-  color: #000000;
-  background-color: #BBDAFF; */
-
 }
 
 .bookshelf__item,
@@ -240,7 +273,7 @@ a {
   transition: 200ms ease-in-out;
 }
 
-.bookshelf__item > .hover-wrapper__content.fade {
+.bookshelf__item>.hover-wrapper__content.fade {
   opacity: 0;
 }
 
@@ -256,7 +289,31 @@ a {
   opacity: 1;
 }
 
-/* ===FOOTER=== */
+#clickable {
+  animation: shake 2s infinite;
+}
+
+@keyframes shake {
+  10% {
+    transform: scale(1.05) rotate(5deg);
+  }
+
+  20% {
+    transform: scale(1.05) rotate(-5deg);
+  }
+
+  30% {
+    transform: scale(1.05) rotate(5deg);
+  }
+
+  40% {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 footer {
   border: solid;
@@ -265,94 +322,158 @@ footer {
   padding: 16px;
 }
 
-/* media queries */
-/* .container {
-    max-width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-} */
-/* 
-@media (max-width: 1536px) {
-    .container {
-      max-width: 1280px;
-    }
-  }
-  
-  
-  @media (max-width: 1280px) {
-    .container {
-      max-width: 1024px;
-    }
-  }
-  
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
 
-  @media (max-width: 1024px) {
-    .container {
-      max-width: 768px;
-    }
-  }
-  
-
-  @media (max-width: 768px) {
-    .container {
-      max-width: 640px;
-    }
-  }
-  
-
-  @media (max-width: 640px) {
-    .container {
-      max-width: 475px;
-    }
-  }
-  
-  
-  @media (max-width: 475px) {
-    .container {
-      width: 100%;
-    }
-  } */
-
+/* Max-width 1536 px*/
 @media (max-width: 1536px) {
   .placeholder {
+    grid-column: -2 / -1;
+
     opacity: 100%;
     background-color: var(--main-bg-color);
-    grid-column: -2 / -1;
   }
 }
 
-
+/* Max-width 1280 px*/
 @media (max-width: 1280px) {
   .placeholder {
+    grid-column: -2 / -1;
+
     opacity: 100%;
     background-color: var(--main-bg-color);
-    grid-column: -2 / -1;
   }
 }
 
+/* Max-width 768 px*/
 @media (max-width: 768px) {
-  .hamburger-menu {
+
+  .placeholder {
+    opacity: 0%;
+  }
+
+  /* Responsive hamburger menu
+   ========================================================================== */
+
+  nav input[type="checkbox"] {
+    visibility: visible;
+  }
+
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  #toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 65px;
+    padding: 1rem;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .menu-wrap .hamburger {
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    background-color: var(--main-bg-color);
+    z-index: 1;
+
   }
 
-  .book-display {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+  .menu-wrap .hamburger>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-txt-color);
+    transition: all 0.2s ease;
   }
 
-  .navigation {
-    display: none;
-    margin: 0;
+  .menu-wrap .hamburger>div:before,
+  .menu-wrap .hamburger>div:after {
+    content: " ";
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-txt-color);
+  }
+
+  .menu-wrap .hamburger>div:after {
+    top: 10px;
+  }
+
+  #toggle:checked+.hamburger>div {
+    transform: rotate(135deg);
+  }
+
+  #toggle:checked+.hamburger>div::before,
+  #toggle:checked+.hamburger>div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  #toggle:checked~.menu {
+    visibility: visible;
+  }
+
+  #toggle:checked~#toggle {
+    z-index: 1;
+  }
+
+  #hamburger:checked~ul {
+    display: block;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  .menu-wrap .menu>div {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--main-bg-color);
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    scrollbar-width: none;
   }
 
   nav ul {
     display: none;
-    position: absolute;
     top: 70px;
     margin: 0;
-    height: min-content;
     width: 100%;
     background-color: var(--main-bg-color)
   }
@@ -362,18 +483,10 @@ footer {
     padding: 16px;
     text-align: center;
     width: 100%;
-    border-bottom: 1px solid black;
-  }
-
-  #hamburger-menu:checked~ul {
-    display: block;
-  }
-
-  .placeholder {
-    opacity: 0%;
   }
 }
 
+/* Max-width 475 px*/
 @media (max-width: 475px) {
   .bookshelf {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -389,5 +502,4 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
   }
-
 }
